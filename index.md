@@ -2,8 +2,8 @@
 
 ## Docker stuff
 ```markdown
-docker version ~ docker version
-docker info ~ info of all images and containers 
+`docker version` ~ docker version
+`docker info` ~ info of all images and containers 
 docker run ~ run a container
 docker ps ~ see current running containers
 docker ps -a ~ see past run containers
@@ -17,19 +17,17 @@ Containers ~ Running Images
 docker rmi ~ remove an image
 docker rm ~ also removes an image
 
-docker run -d --name web -p 80:8080 nigelpoulton/pluralsight-docker-ci 
+`docker run -d --name web -p 80:8080 nigelpoulton/pluralsight-docker-ci` 
 ~ 
--d telling daemon start container in detached mode = throw in background and don't latch in terminal output. 
+-d = telling daemon start container in detached mode = throw in background and don't latch in terminal output. 
 --name web = our container name is web
 -p = map network port. web server listening to port 8080. we assign port 80 on docker host to port 8080 inside container. 
 nigelpoulton/pluralsight-docker-ci  = telling which image to use. 
 
-docker ps
-
 Interactive container with shell: 
-docker run -it --name temp ubuntu:latest /bin/bash
+`docker run -it --name temp ubuntu:latest /bin/bash`
 
-ctrl p + q ~ exit the ubuntu
+`ctrl p + q` ~ exit the ubuntu
 
 docker stop $(docker ps -aq) ~ running docker stop as an argument.
 docker rm $(docker ps -aq) ~ remove all container with docker ps -aq as argument.
@@ -39,7 +37,7 @@ docker rmi $(docker images -q) ~ doing the same for all the images.
 
 
 
-`You can use the [editor on GitHub](https://github.com/sthlmj/devnotes/edit/master/index.md) to maintain and preview the content for your website in Markdown files.`
+You can use the [editor on GitHub](https://github.com/sthlmj/devnotes/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 

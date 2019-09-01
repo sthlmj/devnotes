@@ -35,6 +35,7 @@ Interactive container with shell:
 
 
 ## Kanban vs. Scrum
+```markdown 
 Scrum and Kanban are both iterative work systems that rely on process flows and aim to reduce waste. However; there are a few main differences between the two:
 
 **Roles & Responsibilities:** 
@@ -62,7 +63,7 @@ Scrum and Kanban are both iterative work systems that rely on process flows and 
 
 **Scrum** Measures production using velocity through sprints. Each sprint is laid out back-to-back and/or concurrently so that each additional sprint relies on the success of the one before it.
 Best Applications	Best for projects with widely-varying priorities.	Best for teams with stable priorities that may not change as much over time.
-
+```
 
 
 

@@ -34,7 +34,34 @@ Interactive container with shell:
 ```
 
 
+## Kanban vs. Scrum
+Scrum and Kanban are both iterative work systems that rely on process flows and aim to reduce waste. However; there are a few main differences between the two:
 
+**Roles & Responsibilities:** 
+**Kanban** There are no pre-defined roles for a team. Although there may still be a Project Manager, the team is encouraged to collaborate and chip in when any one person becomes overwhelmed.	
+
+**Scrum** Each team member has a predefined role, where the Scrum master dictates timelines, Product owner defines goals and objectives and team members execute the work.
+
+**Due Dates / Delivery Timelines:**	
+**Kanban** Products and processes are delivered continuously on an as-needed basis (with due dates determined by the business as needed).	
+
+**Scrum** Deliverables are determined by sprints, or set periods of time in which a set of work must be completed and ready for review.
+
+**Delegation & Prioritization:** 
+**Kanban** Uses a “pull system,” or a systematic workflow that allows team members to only “pull” new tasks once the previous task is complete.	
+
+**Scrum** Also uses a “pull system” however an entire batch is pulled for each iteration.
+
+**Modifications / Changes:**	
+**Kanban** Allows for changes to be made to a project mid-stream, allowing for iterations and continuous improvement prior to the completion of a project.	
+
+**Scrum** Changes during the sprint are strongly discouraged.
+
+**Measurement of Productivity:**
+**Kanban** Measures production using “cycle time,” or the amount of time it takes to complete one full piece of a project from beginning to end.	
+
+**Scrum** Measures production using velocity through sprints. Each sprint is laid out back-to-back and/or concurrently so that each additional sprint relies on the success of the one before it.
+Best Applications	Best for projects with widely-varying priorities.	Best for teams with stable priorities that may not change as much over time.
 
 
 

@@ -1,7 +1,6 @@
 # Welcome to SthlmJ DevNotes
 
 ## Docker stuff
-```markdown
 `docker version` ~ docker version
 `docker info` ~ info of all images and containers 
 docker run ~ run a container
@@ -32,7 +31,6 @@ Interactive container with shell:
 docker stop $(docker ps -aq) ~ running docker stop as an argument.
 docker rm $(docker ps -aq) ~ remove all container with docker ps -aq as argument.
 docker rmi $(docker images -q) ~ doing the same for all the images.
-```
 
 
 

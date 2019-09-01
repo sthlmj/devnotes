@@ -17,7 +17,7 @@ Containers ~ Running Images
 docker rmi ~ remove an image
 docker rm ~ also removes an image
 
-`docker run -d --name web -p 80:8080 nigelpoulton/pluralsight-docker-ci` 
+docker run -d --name web -p 80:8080 nigelpoulton/pluralsight-docker-ci 
 ~ 
 -d telling daemon start container in detached mode = throw in background and don't latch in terminal output. 
 --name web = our container name is web
@@ -39,7 +39,7 @@ docker rmi $(docker images -q) ~ doing the same for all the images.
 
 
 
-You can use the [editor on GitHub](https://github.com/sthlmj/devnotes/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+`You can use the [editor on GitHub](https://github.com/sthlmj/devnotes/edit/master/index.md) to maintain and preview the content for your website in Markdown files.`
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 

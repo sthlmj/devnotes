@@ -62,7 +62,12 @@ Scrum and Kanban are both iterative work systems that rely on process flows and 
 **Kanban** Measures production using “cycle time,” or the amount of time it takes to complete one full piece of a project from beginning to end.	
 
 **Scrum** Measures production using velocity through sprints. Each sprint is laid out back-to-back and/or concurrently so that each additional sprint relies on the success of the one before it.
-Best Applications	Best for projects with widely-varying priorities.	Best for teams with stable priorities that may not change as much over time.
+
+**Best Applications**	
+**Kanban** Best for projects with widely-varying priorities.	
+
+**Scrum** 
+Best for teams with stable priorities that may not change as much over time.
 ```
 
 

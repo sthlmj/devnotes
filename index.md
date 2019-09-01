@@ -4,34 +4,33 @@
 ```markdown 
 `docker version` ~ docker version
 `docker info` ~ info of all images and containers 
-docker run ~ run a container
-docker ps ~ see current running containers
-docker ps -a ~ see past run containers
-docker images ~ list all images
+`docker run` ~ run a container
+`docker ps` ~ see current running containers
+`docker ps -a` ~ see past run containers
+`docker images` ~ list all images
 
 Docker Hub is the default public registry
 
 Images ~ Stopped containers
 Containers ~ Running Images
 
-docker rmi ~ remove an image
-docker rm ~ also removes an image
-
+`docker rmi` ~ remove an image
+`docker rm` ~ also removes an image
 `docker run -d --name web -p 80:8080 nigelpoulton/pluralsight-docker-ci` 
 ~ 
--d = telling daemon start container in detached mode = throw in background and don't latch in terminal output. 
---name web = our container name is web
--p = map network port. web server listening to port 8080. we assign port 80 on docker host to port 8080 inside container. 
-nigelpoulton/pluralsight-docker-ci  = telling which image to use. 
+`-d` = telling daemon start container in detached mode = throw in background and don't latch in terminal output. 
+`--name web` = our container name is **web**
+`-p` = map network port. web server listening to port 8080. we assign port 80 on docker host to port 8080 inside container. 
+`nigelpoulton/pluralsight-docker-ci` = telling which image to use. 
 
 Interactive container with shell: 
 `docker run -it --name temp ubuntu:latest /bin/bash`
 
 `ctrl p + q` ~ exit the ubuntu
 
-docker stop $(docker ps -aq) ~ running docker stop as an argument.
-docker rm $(docker ps -aq) ~ remove all container with docker ps -aq as argument.
-docker rmi $(docker images -q) ~ doing the same for all the images.
+`docker stop $(docker ps -aq)` ~ running docker stop as an argument.
+`docker rm $(docker ps -aq)` ~ remove all container with docker ps -aq as argument.
+`docker rmi $(docker images -q)` ~ doing the same for all the images.
 ```
 
 

@@ -1,7 +1,7 @@
 # Welcome to SthlmJ DevNotes
 
 ## Docker stuff
-```
+```markdown
 `docker version` ~ docker version
 docker info ~ info of all images and containers 
 docker run ~ run a container

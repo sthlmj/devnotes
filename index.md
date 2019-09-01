@@ -2,7 +2,7 @@
 
 ## Docker stuff
 ```markdown
-`docker version` ~ docker version
+docker version ~ docker version
 docker info ~ info of all images and containers 
 docker run ~ run a container
 docker ps ~ see current running containers
@@ -17,7 +17,7 @@ Containers ~ Running Images
 docker rmi ~ remove an image
 docker rm ~ also removes an image
 
- docker run -d --name web -p 80:8080 nigelpoulton/pluralsight-docker-ci 
+`docker run -d --name web -p 80:8080 nigelpoulton/pluralsight-docker-ci` 
 ~ 
 -d telling daemon start container in detached mode = throw in background and don't latch in terminal output. 
 --name web = our container name is web

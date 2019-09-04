@@ -50,6 +50,9 @@ https://docs.docker.com/engine/reference/commandline/inspect/
 `docker images` ~ list all images
 `docker tag efb740c5821f artifactory` ~ tag a long image name using image id into short name _artifactory_
 
+see short introduction to tags
+https://www.freecodecamp.org/news/an-introduction-to-docker-tags-9b5395636c2a/
+
 Docker Hub is the default public registry
 
 Images ~ Stopped containers

@@ -48,6 +48,7 @@ https://docs.docker.com/engine/reference/commandline/inspect/
 `docker ps` ~ see current running containers
 `docker ps -a` ~ see past run containers
 `docker images` ~ list all images
+`docker tag efb740c5821f artifactory` ~ tag a long image name using image id into short name _artifactory_
 
 Docker Hub is the default public registry
 

@@ -15,6 +15,7 @@ Once you are inside do:
 
 or any other bash command like:
 `cd ..`
+
 ------------------------------------------------------------------------------
 This command should let you explore **a docker image**:
 `docker run --rm -it --entrypoint=/bin/bash name-of-image`
@@ -104,7 +105,7 @@ Scrum and Kanban are both iterative work systems that rely on process flows and 
 
 
 
-
+########################################################################################################
 
 # How to use Jekyll Github Pages theme: 
 You can use the [editor on GitHub](https://github.com/sthlmj/devnotes/edit/master/index.md) to maintain and preview the content for your website in Markdown files.

@@ -2,6 +2,45 @@
 
 ## Docker stuff
 ```markdown 
+
+Explore a running **docker container**:
+`docker exec -it name-of-container bash`
+
+The equivalent for this in docker-compose would be:
+`docker-compose exec web bash`
+(web is the name-of-service in this case and it has tty by default.)
+
+Once you are inside do:
+`ls -lsa`
+
+or any other bash command like:
+`cd ..`
+------------------------------------------------------------------------------
+This command should let you explore **a docker image**:
+`docker run --rm -it --entrypoint=/bin/bash name-of-image`
+
+once inside do:
+`ls -lsa`
+
+or any other bash command like:
+`cd ..`
+The -it stands for interactive... and tty.
+
+This command should let you **inspect a running docker container or image**:
+`docker inspect name-of-container-or-image`
+
+You might want to do this and find out if there is any bash or sh in there. Look for entrypoint or cmd in the json return.
+
+see docker exec documentation
+https://docs.docker.com/engine/reference/commandline/exec/#usage
+
+see docker-compose exec documentation
+https://docs.docker.com/compose/reference/exec/
+
+see docker inspect documentation
+https://docs.docker.com/engine/reference/commandline/inspect/
+####------------------------------------------------------------------------------
+
 `docker version` ~ docker version
 `docker info` ~ info of all images and containers 
 `docker run` ~ run a container

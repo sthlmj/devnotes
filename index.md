@@ -3,6 +3,21 @@
 ## Docker stuff
 ```markdown 
 
+Pulls **jenkins LTS**:
+`docker pull jenkins/jenkins:lts`
+
+Runs jenkins on docker with **java environment**: 
+`docker run --name MyJenkins -p 8082:8080 -p 50000:50000 --env JAVA_OPTS=-Dhudson.footerURL=http://mycompany.com jenkins/jenkins:lts`
+
+Runs jenkins on docker on mapped port 8082 **volume attached**:
+`docker run --name MyJenkins -p 8082:8080 -p 50000:50000 -v /Users/joe/Desktop/Jenkins_Home:/var/jenkins_home jenkins/jenkins:lts`
+
+Runs jenkins on docker on mapped port 8082 **volume attached and java env**:
+`docker run --name MyJenkins -p 8082:8080 -p 50000:50000 -v /Users/joe/Desktop/Jenkins_Home:/var/jenkins_home --env JAVA_OPTS=-Dhudson.footerURL=http://mycompany.com jenkins/jenkins:lts`
+
+Runs jenkins on docker on mapped port 8082 **_no_ volume attached**:
+`docker run -p 8082:8080 -p 50000:50000 jenkins/jenkins:lts`
+
 Explore a running **docker container**:
 `docker exec -it name-of-container bash`
 

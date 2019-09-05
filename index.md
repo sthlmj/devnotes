@@ -21,6 +21,12 @@ Runs jenkins on docker on mapped port 8082 **_no_ volume attached**:
 **Jenkins docker timezone**, add the following to run command: 
 `-v /etc/timezone:/etc/timezone -v /etc/localtime:/etc/localtime`
 
+Explore a running **docker container as root**:
+`docker exec -it -u root 18083ce7261b /bin/bash`
+
+As root, **change date** by executing this command inside container: 
+`dpkg-reconfigure tzdata`
+
 Explore a running **docker container**:
 `docker exec -it name-of-container /bin/bash`
 

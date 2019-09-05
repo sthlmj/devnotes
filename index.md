@@ -18,6 +18,9 @@ Runs jenkins on docker on mapped port 8082 **volume attached**:
 Runs jenkins on docker on mapped port 8082 **_no_ volume attached**:
 `docker run -p 8082:8080 -p 50000:50000 jenkins/jenkins:lts`
 
+**Jenkins docker timezone**, add the following to run command: 
+`-v /etc/timezone:/etc/timezone -v /etc/localtime:/etc/localtime`
+
 Explore a running **docker container**:
 `docker exec -it name-of-container bash`
 

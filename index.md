@@ -22,7 +22,7 @@ Runs jenkins on docker on mapped port 8082 **_no_ volume attached**:
 `-v /etc/timezone:/etc/timezone -v /etc/localtime:/etc/localtime`
 
 Explore a running **docker container**:
-`docker exec -it name-of-container bash`
+`docker exec -it name-of-container /bin/bash`
 
 The equivalent for this in docker-compose would be:
 `docker-compose exec web bash`

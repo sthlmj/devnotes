@@ -2,14 +2,33 @@
 
 ## Jenkins stuff
 
-**Jenkins Configutaiton AS Code**:
+**Jenkins Configuration AS Code**:
 With Jenkins Configuration AS Code [JCASC](https://github.com/jenkinsci/configuration-as-code-plugin/blob/master/README.md) plugin you can configure Jenkins master by code instead of clicking through the GUI. This helps if you needs to do a lot of configuraitons at once. 
 
-[Jenkins Configuration as Code example:](https://www.praqma.com/stories/start-jenkins-config-as-code/)
-
+Jenkins [Configuration AS Code example:](https://www.praqma.com/stories/start-jenkins-config-as-code/)
 Jenkins Configuraiton as Code another [example](https://codebabel.com/jcasc-stateless-ci/)
 
 Yet another [example](https://jenkins.io/blog/2018/08/23/speaker-blog-casc-part-1/)
+
+Code example within the path:
+`/usr/jenkinsconfigurationascode.yml`
+
+$ cat jenkinsconfigurationascode.yml 
+`jenkins:
+  systemMessage: "Jenkan managed by configuration as Code//Joe"
+
+  securityRealm:
+    ldap:
+      configurations:
+        - server: ldap.acme.com
+          rootDN: dc=acme,dc=fr
+          managerPasswordSecret: ${LDAP_PASSWORD}
+      cache:
+        size: 100
+        ttl: 10
+      userIdStrategy: CaseSensitive
+      groupIdStrategy: CaseSensitive
+`
 
 ![Jenkins system wide message](https://github.com/sthlmj/devnotes/blob/master/Screenshot%202019-09-08%20at%2018.31.09.png)
 ![Jenkins system wide message2](https://github.com/sthlmj/devnotes/blob/master/Screenshot%202019-09-08%20at%2018.37.54.png)
@@ -17,6 +36,7 @@ Yet another [example](https://jenkins.io/blog/2018/08/23/speaker-blog-casc-part-
 
 ### Jenkins Pipeline as code:
 Example: 
+
 
 
 ## Docker stuff

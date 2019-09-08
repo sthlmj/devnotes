@@ -52,6 +52,9 @@ Copy files **from container to host**:
 Copy file example **from container MyJenkins to host**:
 `docker cp MyJenkins:/var/jenkins_home/secrets/initialAdminPassword /host/path/target`
 
+copy file **from host to docker container**:
+`docker cp foo.txt mycontainer:/foo.txt`
+
 ------------------------------------------------------------------------------
 This command should let you explore **a docker image**:
 `docker run --rm -it --entrypoint=/bin/bash name-of-image`

@@ -1,6 +1,6 @@
 # Welcome to SthlmJ DevNotes
 
-## Jnekins stuff
+## Jenkins stuff
 
 Jenkins Configuration as Code example: 
 https://www.praqma.com/stories/start-jenkins-config-as-code/

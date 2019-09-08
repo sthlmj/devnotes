@@ -11,7 +11,9 @@ Jenkins Configuraiton as Code another [example](https://codebabel.com/jcasc-stat
 
 Yet another [example](https://jenkins.io/blog/2018/08/23/speaker-blog-casc-part-1/)
 
-![Look ma](https://github.com/sthlmj/devnotes/blob/master/Screenshot%202019-09-08%20at%2018.31.09.png)
+![Jenkins system wide message](https://github.com/sthlmj/devnotes/blob/master/Screenshot%202019-09-08%20at%2018.31.09.png)
+![Jenkins system wide message2](https://github.com/sthlmj/devnotes/blob/master/Screenshot%202019-09-08%20at%2018.37.54.png)
+
 
 ### Jenkins Pipeline as code:
 Example: 
@@ -156,5 +158,5 @@ Scrum and Kanban are both iterative work systems that rely on process flows and 
 - **Scrum:** Best for teams with stable priorities that may not change as much over time.
 
 ###############################################################################
-
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
 [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)

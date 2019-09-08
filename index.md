@@ -40,6 +40,12 @@ Once you are inside do:
 or any other bash command like:
 `cd ..`
 
+Copy files **from container to host**:
+`docker cp <containerId>:/file/path/within/container /host/path/target`
+
+Copy file example **from container MyJenkins to host**:
+`docker cp MyJenkins:/var/jenkins_home/secrets/initialAdminPassword /host/path/target`
+
 ------------------------------------------------------------------------------
 This command should let you explore **a docker image**:
 `docker run --rm -it --entrypoint=/bin/bash name-of-image`

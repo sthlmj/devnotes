@@ -2,12 +2,13 @@
 
 ## Jenkins stuff
 
-Jenkins Configuration as Code example: 
-https://www.praqma.com/stories/start-jenkins-config-as-code/
+With Jenkins Configuration AS Code [JCASC](https://github.com/jenkinsci/configuration-as-code-plugin/blob/master/README.md) plugin you can configure Jenkins master to  
 
-Jenkins Configuraiton as Code another example: 
-https://codebabel.com/jcasc-stateless-ci/
+[Jenkins Configuration as Code example:](https://www.praqma.com/stories/start-jenkins-config-as-code/)
 
+Jenkins Configuraiton as Code another [example](https://codebabel.com/jcasc-stateless-ci/)
+
+Yet another [example](https://jenkins.io/blog/2018/08/23/speaker-blog-casc-part-1/)
 
 ## Docker stuff
 ```markdown 

@@ -5,6 +5,9 @@
 Jenkins Configuration as Code example: 
 https://www.praqma.com/stories/start-jenkins-config-as-code/
 
+Jenkins Configuraiton as Code another example: 
+https://codebabel.com/jcasc-stateless-ci/
+
 
 ## Docker stuff
 ```markdown 

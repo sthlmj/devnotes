@@ -11,7 +11,7 @@ Jenkins Configuraiton as Code another [example](https://codebabel.com/jcasc-stat
 
 Yet another [example](https://jenkins.io/blog/2018/08/23/speaker-blog-casc-part-1/)
 
-
+![Look ma](https://github.com/sthlmj/devnotes/blob/master/Screenshot%202019-09-08%20at%2018.31.09.png)
 
 **Jenkins Pipeline as code: **
 Example: 

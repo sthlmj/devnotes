@@ -155,6 +155,6 @@ Scrum and Kanban are both iterative work systems that rely on process flows and 
 - **Kanban:** Best for projects with widely-varying priorities.	
 - **Scrum:** Best for teams with stable priorities that may not change as much over time.
 
-########################################################################################################
+###############################################################################
 
 [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)

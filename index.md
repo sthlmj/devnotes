@@ -1,5 +1,11 @@
 # Welcome to SthlmJ DevNotes
 
+## Jnekins stuff
+
+Jenkins Configuration as Code example: 
+https://www.praqma.com/stories/start-jenkins-config-as-code/
+
+
 ## Docker stuff
 ```markdown 
 

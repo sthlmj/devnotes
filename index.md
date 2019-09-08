@@ -14,7 +14,8 @@ Code example within the path:
 `/usr/jenkinsconfigurationascode.yml`
 
 $ cat jenkinsconfigurationascode.yml 
-`jenkins:
+```
+jenkins:
   systemMessage: "Jenkan managed by configuration as Code//Joe"
 
   securityRealm:
@@ -28,7 +29,7 @@ $ cat jenkinsconfigurationascode.yml
         ttl: 10
       userIdStrategy: CaseSensitive
       groupIdStrategy: CaseSensitive
-`
+```
 
 ![Jenkins system wide message](https://github.com/sthlmj/devnotes/blob/master/Screenshot%202019-09-08%20at%2018.31.09.png)
 ![Jenkins system wide message2](https://github.com/sthlmj/devnotes/blob/master/Screenshot%202019-09-08%20at%2018.37.54.png)

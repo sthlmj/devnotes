@@ -35,12 +35,78 @@ jenkins:
 ![Jenkins system wide message2](https://github.com/sthlmj/devnotes/blob/master/Screenshot%202019-09-08%20at%2018.37.54.png)
 
 
-### Jenkins Pipeline as code:
+### Jenkinsfile Pipeline as code:
 Example: 
 
 
+### Jenkins Master - Agent Setup:
+Example:
+https://wiki.jenkins.io/display/JENKINS/Step+by+step+guide+to+set+up+master+and+agent+machines+on+Windows
+
+
+## Artifactory stuff
+Lorem Ipsum
+
+## GitLab stuff
+Pulling GitLab CE in docker: 
+`docker pull store/gitlab/gitlab-ce:11.10.4-ce.0`
+
+Running GitLab CE in docker on port 8083: 
+`docker run -d -p 443:443 -p 8083:80 -p 23:22 gitlabben`
+
+GitLab Readme.md:
+https://docs.gitlab.com/omnibus/docker/README.html
 
 ## Docker stuff
+
+### Docker compose steps
+With [Docker compose](https://docs.docker.com/compose/) you can easily configure, install, and upgrade your Docker-based GitLab installation.
+1. Install docker compose: https://docs.docker.com/compose/install/
+2. Create a docker-compose.yml file (or download an example):
+
+```
+web:
+  image: 'gitlab/gitlab-ce:latest'
+  restart: always
+  hostname: 'gitlab.example.com'
+  environment:
+    GITLAB_OMNIBUS_CONFIG: |
+      external_url 'https://gitlab.example.com'
+      # Add any other gitlab.rb configuration here, each on its own line
+  ports:
+    - '80:80'
+    - '443:443'
+    - '22:22'
+  volumes:
+    - '/srv/gitlab/config:/etc/gitlab'
+    - '/srv/gitlab/logs:/var/log/gitlab'
+    - '/srv/gitlab/data:/var/opt/gitlab'
+```
+3. Make sure you are in the same directory as `docker-compose.yml` and `run docker-compose up -d` to start GitLab
+
+Read [“Pre-configure Docker container”](https://docs.gitlab.com/omnibus/docker/README.html#pre-configure-docker-container) to see how the `GITLAB_OMNIBUS_CONFIG` variable works.
+
+Below is another `docker-compose.yml` example with GitLab running on a custom HTTP and SSH port. Notice how the `GITLAB_OMNIBUS_CONFIG` variables match the `ports` section:
+```
+web:
+  image: 'gitlab/gitlab-ce:latest'
+  restart: always
+  hostname: 'gitlab.example.com'
+  environment:
+    GITLAB_OMNIBUS_CONFIG: |
+      external_url 'http://gitlab.example.com:8929'
+      gitlab_rails['gitlab_shell_ssh_port'] = 2224
+  ports:
+    - '8929:8929'
+    - '2224:22'
+  volumes:
+    - '/srv/gitlab/config:/etc/gitlab'
+    - '/srv/gitlab/logs:/var/log/gitlab'
+    - '/srv/gitlab/data:/var/opt/gitlab'
+```
+This is the same as using `--publish 8929:8929 --publish 2224:22`.
+
+
 ```markdown 
 
 Pulls **jenkins LTS**:

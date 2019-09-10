@@ -37,14 +37,21 @@ jenkins:
 
 ### Jenkinsfile Pipeline as code:
 Example: 
-
+TODOOOOOOOOTODOOOOOOOOTODOOOOOOOO
+TODOOOOOOOOTODOOOOOOOOTODOOOOOOOO
 
 ### Jenkins Master - Agent Setup:
+TODOOOOOOOOTODOOOOOOOOTODOOOOOOOO
+TODOOOOOOOOTODOOOOOOOOTODOOOOOOOO
+
 Example:
 https://wiki.jenkins.io/display/JENKINS/Step+by+step+guide+to+set+up+master+and+agent+machines+on+Windows
 
 
 ## Binary Repository Manager - Artifactory stuff
+TODOOOOOOOOTODOOOOOOOOTODOOOOOOOO
+TODOOOOOOOOTODOOOOOOOOTODOOOOOOOO
+
 Terminology - What is an artifact: https://devops.stackexchange.com/questions/1898/what-is-an-artifactory
 
 ## GitLab stuff

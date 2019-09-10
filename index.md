@@ -59,7 +59,7 @@ https://docs.gitlab.com/omnibus/docker/README.html
 
 ## Docker stuff
 
-### Docker compose steps
+### Docker compose steps - Example of installing GitLab using docker-compose
 With [Docker compose](https://docs.docker.com/compose/) you can easily configure, install, and upgrade your Docker-based GitLab installation.
 1. Install docker compose: https://docs.docker.com/compose/install/
 2. Create a docker-compose.yml file (or download an example):

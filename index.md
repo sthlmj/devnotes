@@ -44,8 +44,8 @@ Example:
 https://wiki.jenkins.io/display/JENKINS/Step+by+step+guide+to+set+up+master+and+agent+machines+on+Windows
 
 
-## Artifactory stuff
-Lorem Ipsum
+## Binary Repository Manager - Artifactory stuff
+Terminology - What is an artifact: https://devops.stackexchange.com/questions/1898/what-is-an-artifactory
 
 ## GitLab stuff
 Pulling GitLab CE in docker: 

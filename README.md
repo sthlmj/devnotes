@@ -89,7 +89,7 @@ web:
     - '/srv/gitlab/logs:/var/log/gitlab'
     - '/srv/gitlab/data:/var/opt/gitlab'
 ```
-3. Make sure you are in the same directory as `docker-compose.yml` and `run docker-compose up -d` to start GitLab
+3. Make sure you are in the same directory as `docker-compose.yml` and run `docker-compose up -d` to start GitLab
 
 Read [“Pre-configure Docker container”](https://docs.gitlab.com/omnibus/docker/README.html#pre-configure-docker-container) to see how the `GITLAB_OMNIBUS_CONFIG` variable works.
 

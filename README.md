@@ -65,6 +65,18 @@ GitLab Readme.md:
 https://docs.gitlab.com/omnibus/docker/README.html
 
 ## Docker stuff
+Differences between dockerfile and docker-compose: Docker-compose.yml files are used for defining and running multi-container Docker applications, whereas Dockerfiles are simple text files that contain the commands to assemble an image that will be used to deploy containers.
+
+### Example with Dockerfile and Docker Compose - Dockerfiles: 
+Link: https://docs.docker.com/compose/gettingstarted/
+
+#### Step1: Setup
+$ mkdir composetest
+$ cd composetest
+
+
+
+### Example with Dockerfile and Docker Compose - Docker-compose.yaml: 
 
 ### Docker compose steps - Example of installing GitLab using docker-compose
 With [Docker compose](https://docs.docker.com/compose/) you can easily configure, install, and upgrade your Docker-based GitLab installation.

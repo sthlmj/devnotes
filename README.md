@@ -73,7 +73,7 @@ Link: https://docs.docker.com/compose/gettingstarted/
 #### Step1: Setup
 Define the application dependencies.
 
-1. Create a directory for the project:
+##### 1. Create a directory for the project:
 ```
 $ mkdir composetest
 $ cd composetest

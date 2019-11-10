@@ -1,5 +1,10 @@
 # Welcome to SthlmJ DevNotes
 
+## Girder
+
+**Girder Explained**:
+Girder is a data management platform. https://blog.kitware.com/girder-applications-an-inside-look/
+
 ## Jenkins stuff
 
 **Jenkins Configuration AS Code**:

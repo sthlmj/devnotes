@@ -3,6 +3,10 @@
 ## Girder
 
 **Girder Explained**:
+Installing third party plugin: 
+`pip install girder-ldap`
+`girder build`
+Admin Documentation link: https://girder.readthedocs.io/en/stable/installation.html
 Girder is a data management platform. https://blog.kitware.com/girder-applications-an-inside-look/
 Official documentation for the old 2.4.0 version. https://buildmedia.readthedocs.org/media/pdf/girder/v2.4.0/girder.pdf
 

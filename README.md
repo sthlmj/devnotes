@@ -4,13 +4,14 @@
 
 **Girder Explained**:
 Installing third party plugin: 
+
 Step 1: Installing plugins and rebuilding web
 ```
 pip install girder-ldap
 girder build
 ```
 
-Step 2:
+Step 2: Commit to docker image and restart Girder container
 ```
 docker commit <CONTAINER-ID> girder/girder:myversion
 docker restart girder

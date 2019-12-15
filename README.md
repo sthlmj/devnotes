@@ -6,7 +6,7 @@
 https://rehansaeed.com/tag/docker-compose/ 
 https://logz.io/blog/metricbeat-tutorial/
 
-Installing ELK-B:
+**Installing ELK-B:**
 
 Step 1: Install, configure and test that Elasticsearch is running
 ```
@@ -18,9 +18,11 @@ docker run elasticsearch
 Config file: 
 ```
 /etc/elasticsearch/elasticsearch.yml
+```
 
-change parameters: 
-cluster.name: My Organization Network monitoring
+Config file change params: 
+```
+cluster.name: Netmon-Cluster
 node.name: se00-mon01
 network.host: localhost
 ```
@@ -34,7 +36,7 @@ Test that Elasticsearch is running:
 ```
 curl http://localhost:9200
 ```
-Verify: name, cluster-name, version, tagline "you know for search"
+Verify: ``` name, cluster-name, version, tagline "you know for search" ```
 
 
 Step 2: Install, configure and test that Logstash is running
@@ -45,15 +47,59 @@ docker run logstash
 ```
 
 logstash is installed in: 
-/usr/share/logstash
+```/usr/share/logstash```
 
-Test logstash installation on localhost (192.168.0.12): 
-By inputing to log: bin/logstash -e 'input { stdin { } } output { elasticsearch { hosts => ["192.168.0.12:9200"] } }'
+Test logstash installation that it's sending message to elasticsearch on localhost or (192.168.0.12): 
+By inputing to log: ``` /usr/share/logstash/bin/logstash -e 'input { stdin { } } output { elasticsearch { hosts => ["192.168.0.12:9200"] } }' ```
 
 Type some test message on the terminal
 
-Verify message was received: ```GET http://192.168.0.12:9200/logstash-*/_search```
-Verify GET message index was from logstash, timestamp, message
+Verify message was received on elasticsearch: ```GET http://192.168.0.12:9200/logstash-*/_search```
+Verify GET message index was from ```logstash, timestamp, message```
+
+Step 3: Install, configure and test kibana
+```
+yum install kibana
+or 
+docker run kibana
+```
+
+Config file: 
+```/etc/kibana/kibana.yml```
+
+Config file change params: 
+```
+server.host: "192.168.0.15"
+server.name: "my-kibana"
+elasticsearch.url: "http://192.168.0.12:9200"
+```
+
+Kibana confirm index pattern: 
+Goto kibana: http://192.168.0.15:5601 and confirm that index pattern is: ```logstash-*```
+
+Kibana select confirm time-field name: @timestamp
+
+Kibana click ```Discover``` tab and see that you've got the log from Step 2
+
+Step 4: Configure logstash for beats
+On logstash server, add new logpattern:
+```/etc/logstash/conf.d/beats.conf
+
+input{
+    beats{
+        port => "5043"
+    }
+}
+
+output{
+    elasticsearch {
+        hosts => ["192.168.0.12:9200"]
+        index => "%{[@metadata][beat]}-%{+YYYY.MM.dd}"
+        document_type => "%{[@metadata][type]}"
+    }
+}
+
+```
 
 
 ## Girder

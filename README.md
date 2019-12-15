@@ -39,7 +39,7 @@ curl http://localhost:9200
 Verify: ``` name, cluster-name, version, tagline "you know for search" ```
 
 
-Step 2: Install, configure and test that Logstash is running
+Step 2: Install, configure and test that Logstash is running on 192.168.0.14:5043
 ```
 yum install logstash
 or 
@@ -101,6 +101,44 @@ output{
 
 ```
 
+Step 5: Creating winlogbeat dashboard
+On kibana, click index pattern, click add new, winlogbeat index name pattern: ```winlogbeat-*``` time-field should be: ```@timestamp``` 
+
+Vizualize winlogbeat Dashboard: 
+Select Line Chart, choose ```winlogbeat-*``` index pattern. ```Y-Axis: Count``` and ```X-Axis: Date Histogram``` and @timestamp, custom label Events. Click on play button. Add per server on same chart, select Split Chart, sub-aggregate: Terms, Fields: computer_name, order-by: metric: count, custom-label: Hosts. Fix split lines. Click on play button again. Save Vizualization as Windows Server Events.
+
+Create dashboard and add vizualization: 
+Click Dashboard, add Windows Server Events. Adjust the dashboard and save as: Windows Server: Events
+
+Fix so that it shows Error events: 
+Click Discovery, on search box: level: "Error". Save search as: Windows Events: Errors. 
+
+Click vizualization, click bar-chart. Select saved search: Windows Events: Errors
+Customize chart: Y-Axis: Count and X-Axis: Date Histogram, @timestamp, split bars by: Terms, Field: Computer_name, Order By: metric: count. 
+Save vizualization: Windows Events: Errors
+
+Click Dashboard, add Windows Events: Errors to dashboard. Set refresh intervalls on 10 sec. Save Dashboard.
+
+Step 6: Install metricbeat and configure metricbeat for windows
+Download metricbeat for windows. 
+Open and configure ```metricbeat.yml``` file, check metricbeat configs for cpu, ram hdd, tags and fields. Change output from default elasticsearch to logstash.
+
+Install metricbeat template:
+```Invoke-WebRequest -uri http://192.168.0.12:9200/_template/metricbeat -Method PUT -infile .\metricbeat.template.json```
+Verify StatusCode: 200, OK, Acknowledge. So that we know our template is correctly installed.
+
+Install and run metricbeat service: 
+```.\install-service-metricbeat.ps1```
+```start-service metricbeat```
+
+Step 7: Add new index pattern in kibana
+Click management, add new: ```metricbeat-*``` and select ```@timestamp``` Click save. 
+Verify that metricsbeat are streaming in in the Discovery tab.
+Visualize RAM consumption with a line chart in visualize. pick ```metricbeat-*``` and set ```Y-Axis: Average```, ```system.memory.used.pct``` on X-Axis: select Date Histogram. Add sub bucket to set on each servers. Split lines. Field: beat.hostname. Save visualization: Server Ram Usage. 
+
+Visualize CPU, create new area chart, metricbeat...... to be continued. 
+
+Visualize HDD, create new area chart, metricbeat...... to be continued. 
 
 ## Girder
 

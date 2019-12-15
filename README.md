@@ -3,8 +3,58 @@
 ## ELK-B
 
 **Elastic Kibana -Beats**
-https://rehansaeed.com/tag/docker-compose/
+https://rehansaeed.com/tag/docker-compose/ 
 https://logz.io/blog/metricbeat-tutorial/
+
+Installing ELK-B:
+
+Step 1: Install, configure and test that Elasticsearch is running
+```
+yum install elasticsearch
+or
+docker run elasticsearch
+```
+
+Config file: 
+```
+/etc/elasticsearch/elasticsearch.yml
+
+change parameters: 
+cluster.name: My Organization Network monitoring
+node.name: se00-mon01
+network.host: localhost
+```
+
+Memory HEAP: 
+```
+sysctl -w vm.max_map_count=262144
+```
+
+Test that Elasticsearch is running: 
+```
+curl http://localhost:9200
+```
+Verify: name, cluster-name, version, tagline "you know for search"
+
+
+Step 2: Install, configure and test that Logstash is running
+```
+yum install logstash
+or 
+docker run logstash
+```
+
+logstash is installed in: 
+/usr/share/logstash
+
+Test logstash installation on localhost (192.168.0.12): 
+By inputing to log: bin/logstash -e 'input { stdin { } } output { elasticsearch { hosts => ["192.168.0.12:9200"] } }'
+
+Type some test message on the terminal
+
+Verify message was received: ```GET http://192.168.0.12:9200/logstash-*/_search```
+Verify GET message index was from logstash, timestamp, message
+
 
 ## Girder
 

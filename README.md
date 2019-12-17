@@ -226,6 +226,8 @@ https://docs.gitlab.com/omnibus/docker/README.html
 ## Docker stuff
 Differences between dockerfile and docker-compose: Docker-compose.yml files are used for defining and running multi-container Docker applications, whereas Dockerfiles are simple text files that contain the commands to assemble an image that will be used to deploy containers.
 
+Docker proxy: https://docs.docker.com/network/proxy/#configure-the-docker-client
+
 ### Example with Dockerfile and Docker Compose: 
 Link: https://docs.docker.com/compose/gettingstarted/
 

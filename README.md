@@ -1,5 +1,29 @@
 # Welcome to SthlmJ DevNotes
 
+## GERRITCODEREVIEW
+
+**Great gerrit tutorials**
+https://www.mediawiki.org/wiki/Gerrit/Tutorial#Set_Up_SSH_Keys_in_Gerrit
+
+**Gerrit plug-n-play in docker**
+Quickly gets gerrit up n running to test it out:
+```
+docker run -ti -p 8080:8080 -p 29418:29418 gerritcodereview/gerrit
+```
+
+**Gerrit ssh key n ssh to Gerrit**
+Step 1: ssh keygen
+```
+ssh-keygen -t rsa -C "iam.external@gmail.com"
+```
+
+Step 2: get ssh up and running, add private key to agent and check gerrit version through ssh daemon
+```
+eval `ssh-agent`
+ssh-add .ssh/id_rsa
+ssh -p 29418 admin@localhost gerrit version
+```
+
 ## ELK-B
 
 **Elastic Kibana -Beats**

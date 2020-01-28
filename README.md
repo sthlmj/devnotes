@@ -3,7 +3,7 @@
 ## GERRITCODEREVIEW
 
 **Great Links** </br>
-Tutorial: https://www.mediawiki.org/wiki/Gerrit/Tutorial#Set_Up_SSH_Keys_in_Gerrit
+Tutorial: https://www.mediawiki.org/wiki/Gerrit/Tutorial#Set_Up_SSH_Keys_in_Gerrit </br>
 Gerrit in production: https://github.com/GerritCodeReview/docker-gerrit
 
 **Gerrit plug-n-play in docker** </br>

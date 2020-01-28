@@ -5,7 +5,7 @@
 **Great gerrit tutorials**
 https://www.mediawiki.org/wiki/Gerrit/Tutorial#Set_Up_SSH_Keys_in_Gerrit
 
-**Gerrit plug-n-play in docker**
+**Gerrit plug-n-play in docker** 
 Quickly gets gerrit up n running to test it out:
 ```
 docker run -ti -p 8080:8080 -p 29418:29418 gerritcodereview/gerrit

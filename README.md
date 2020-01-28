@@ -15,7 +15,7 @@ docker run -ti -p 8080:8080 -p 29418:29418 gerritcodereview/gerrit
 **Gerrit ssh key n ssh to Gerrit** </br>
 Step 1: ssh keygen
 ```
-ssh-keygen -t rsa -C "iam.external@gmail.com"
+ssh-keygen -t rsa -C "iam.external@wellwellvell.com"
 ```
 
 Step 2: get ssh up and running, add private key to agent and check gerrit version through ssh daemon

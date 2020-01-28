@@ -2,16 +2,17 @@
 
 ## GERRITCODEREVIEW
 
-**Great gerrit tutorials**
-https://www.mediawiki.org/wiki/Gerrit/Tutorial#Set_Up_SSH_Keys_in_Gerrit
+**Great Links** </br>
+Tutorial: https://www.mediawiki.org/wiki/Gerrit/Tutorial#Set_Up_SSH_Keys_in_Gerrit
+Gerrit in production: https://github.com/GerritCodeReview/docker-gerrit
 
-**Gerrit plug-n-play in docker** 
-Quickly gets gerrit up n running to test it out:
+**Gerrit plug-n-play in docker** </br>
+Quickly gets gerrit up n running to test it out: 
 ```
 docker run -ti -p 8080:8080 -p 29418:29418 gerritcodereview/gerrit
 ```
 
-**Gerrit ssh key n ssh to Gerrit**
+**Gerrit ssh key n ssh to Gerrit** </br>
 Step 1: ssh keygen
 ```
 ssh-keygen -t rsa -C "iam.external@gmail.com"
@@ -23,6 +24,7 @@ eval `ssh-agent`
 ssh-add .ssh/id_rsa
 ssh -p 29418 admin@localhost gerrit version
 ```
+
 
 ## ELK-B
 

@@ -33,7 +33,73 @@ List all plugins:
 ssh -p 29418 admin@localhost gerrit plugin ls
 ```
 
-Install plugin: </br>
+List all plugins - output:
+```
+Name                           Version    Status   File
+-------------------------------------------------------------------------------
+avatars-gravatar               381fc84a89 ENABLED  avatars-gravatar.jar
+codemirror-editor              v2.16.8    ENABLED  codemirror-editor.jar
+commit-message-length-validator v2.16.8    ENABLED  commit-message-length-validator.jar
+delete-project                 v2.16-116-g6787290183 ENABLED  delete-project.jar
+download-commands              v2.16.8    ENABLED  download-commands.jar
+events-log                     v2.13-284-g7c88d05a87 ENABLED  events-log.jar
+find-owners                    a11833e109 ENABLED  find-owners.jar
+gitiles                        2c91cbc413 ENABLED  gitiles.jar
+healthcheck                    0dd5329ea2 ENABLED  healthcheck.jar
+heartbeat                      0371a82791 ENABLED  heartbeat.jar
+hooks                          v2.16.8    ENABLED  hooks.jar
+plugin-manager                 v2.15.3-6-g613e25e1b7 ENABLED  plugin-manager.jar
+replication                    v2.16.8    ENABLED  replication.jar
+reviewnotes                    v2.16.8    ENABLED  reviewnotes.jar
+singleusergroup                v2.16.8    ENABLED  singleusergroup.jar
+uploadvalidator                f7b1c59e78 ENABLED  uploadvalidator.jar
+```
+
+Install heartbeat.jar plugin: </br>
+```
+ssh -p 29418 admin@localhost gerrit plugin install https://gerrit-ci.gerritforge.com/view/Plugins-stable-2.16/job/plugin-heartbeat-bazel-stable-2.16/lastSuccessfulBuild/artifact/bazel-bin/plugins/heartbeat/heartbeat.jar
+```
+
+Install heartbeat.jar - tail log - output: </br>
+```
+[2020-01-29 23:04:22,852] [SSH gerrit plugin install https://gerrit-ci.gerritforge.com/view/Plugins-stable-2.16/job/plugin-heartbeat-bazel-stable-2.16/lastSuccessfulBuild/artifact/bazel-bin/plugins/heartbeat/heartbeat.jar (admin)] INFO  com.google.gerrit.server.plugins.PluginLoader : Installed plugin heartbeat
+[2020-01-29 23:05:15,910] [PluginScanner] INFO  com.google.gerrit.server.plugins.PluginLoader : Reloading plugin heartbeat
+[2020-01-29 23:05:16,025] [PluginScanner] INFO  com.ericsson.gerrit.plugins.heartbeat.HeartbeatDaemon : Initialized to send heartbeat event every 15000 milliseconds
+[2020-01-29 23:05:16,043] [PluginScanner] INFO  com.google.gerrit.server.plugins.PluginLoader : Unloading plugin heartbeat, version 0371a82791
+[2020-01-29 23:05:16,043] [PluginScanner] INFO  com.ericsson.gerrit.plugins.heartbeat.HeartbeatDaemon : Stopped sending heartbeat event
+[2020-01-29 23:05:16,045] [PluginScanner] INFO  com.google.gerrit.server.plugins.PluginLoader : Reloaded plugin heartbeat, version 0371a82791
+[2020-01-29 23:06:16,624] [WorkQueue-1] INFO  com.google.gerrit.server.plugins.CleanupHandle : Cleaned plugin plugin_heartbeat_200129_2304_303494816642575780.jar
+```
+
+Install healthcheck.jar plugin: </br>
+```
+ssh -p 29418 admin@localhost gerrit plugin install https://gerrit-ci.gerritforge.com/view/Plugins-stable-2.16/job/plugin-healthcheck-bazel-stable-2.16/lastSuccessfulBuild/artifact/bazel-bin/plugins/healthcheck/healthcheck.jar
+```
+
+Install healthcheck.jar - tail log - output: </br>
+```
+[2020-01-29 23:00:28,240] [SSH gerrit plugin install https://gerrit-ci.gerritforge.com/view/Plugins-stable-2.16/job/plugin-healthcheck-bazel-stable-2.16/lastSuccessfulBuild/artifact/bazel-bin/plugins/healthcheck/healthcheck.jar (admin)] INFO  com.google.gerrit.server.plugins.PluginLoader : Installed plugin healthcheck
+[2020-01-29 23:01:15,958] [PluginScanner] INFO  com.google.gerrit.server.plugins.PluginLoader : Reloading plugin healthcheck
+Jan 29, 2020 11:01:16 PM com.google.inject.servlet.GuiceFilter setPipeline
+WARNING: Multiple Servlet injectors detected. This is a warning indicating that you have more than one GuiceFilter running in your web application. If this is deliberate, you may safely ignore this message. If this is NOT deliberate however, your application may not work as expected.
+[2020-01-29 23:01:16,129] [PluginScanner] INFO  com.google.gerrit.server.config.PluginConfigFactory : No /var/gerrit/etc/healthcheck.config; assuming defaults
+[2020-01-29 23:01:16,140] [PluginScanner] WARN  com.google.gerrit.server.plugins.PluginLoader : Cannot load plugin healthcheck
+java.lang.IllegalArgumentException: A metric named plugins/healthcheck/reviewdb/latest_latency already exists
+	at com.codahale.metrics.MetricRegistry.register(MetricRegistry.java:97)
+	at com.google.gerrit.metrics.dropwizard.CallbackMetricImpl0.register(CallbackMetricImpl0.java:72)
+	at com.google.gerrit.metrics.dropwizard.DropWizardMetricMaker.newTrigger(DropWizardMetricMaker.java:304)
+	at com.google.gerrit.server.plugins.PluginMetricMaker.newTrigger(PluginMetricMaker.java:161)
+	at com.google.gerrit.metrics.MetricMaker.newTrigger(MetricMaker.java:139)
+	at com.googlesource.gerrit.plugins.healthcheck.HealthCheckMetrics.start(HealthCheckMetrics.java:80)
+	at com.google.gerrit.lifecycle.LifecycleManager.start(LifecycleManager.java:95)
+	at com.google.gerrit.server.plugins.ServerPlugin.startPlugin(ServerPlugin.java:246)
+	at com.google.gerrit.server.plugins.ServerPlugin.start(ServerPlugin.java:175)
+	at com.google.gerrit.server.plugins.PluginLoader.runPlugin(PluginLoader.java:495)
+	at com.google.gerrit.server.plugins.PluginLoader.rescan(PluginLoader.java:423)
+	at com.google.gerrit.server.plugins.PluginScannerThread.run(PluginScannerThread.java:42)
+```
+
+Install its-jira.jar plugin: </br>
 ```
 ssh -p 29418 admin@localhost gerrit plugin install -n its-jira.jar https://gerrit-ci.gerritforge.com/view/Plugins-stable-2.16/job/plugin-its-jira-bazel-stable-2.16/lastSuccessfulBuild/artifact/bazel-bin/plugins/its-jira/its-jira.jar
 ```

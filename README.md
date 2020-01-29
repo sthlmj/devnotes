@@ -74,8 +74,6 @@ Caused by: java.lang.RuntimeException: No valid Jira server configuration was fo
 fatal: Plugin failed to install. Cause: No valid Jira server configuration was found for project 'All-Projects'
 .Missing one or more configuration values: url: null, username: null, password: null
 
-</br>
-</br>
 
 [2020-01-29 22:47:48,409] [SSH gerrit plugin install -n its-jira.jar https://gerrit-ci.gerritforge.com/view/Plugins-stable-2.16/job/plugin-its-jira-bazel-stable-2.16/lastSuccessfulBuild/artifact/bazel-bin/plugins/its-jira/its-jira.jar (admin)] WARN  com.google.gerrit.server.plugins.PluginLoader : Plugin provides its own name: <its-jira>, use it instead of the input name: <its-jira.jar>
 [2020-01-29 22:47:48,597] [SSH gerrit plugin install -n its-jira.jar https://gerrit-ci.gerritforge.com/view/Plugins-stable-2.16/job/plugin-its-jira-bazel-stable-2.16/lastSuccessfulBuild/artifact/bazel-bin/plugins/its-jira/its-jira.jar (admin)] INFO  com.googlesource.gerrit.plugins.its.jira.JiraModule : JIRA is configured as ITS

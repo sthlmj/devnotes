@@ -28,6 +28,8 @@ ssh -p 29418 admin@localhost gerrit version
 ```
 
 **Gerrit plugins** </br>
+Possible to install plugins via plugins manager. Just click install and plugin will be downloaded and installed in the plugins directory. Suitable candidate is messageoftheday plugin.
+
 List all plugins: 
 ```
 ssh -p 29418 admin@localhost gerrit plugin ls
@@ -48,11 +50,17 @@ gitiles                        2c91cbc413 ENABLED  gitiles.jar
 healthcheck                    0dd5329ea2 ENABLED  healthcheck.jar
 heartbeat                      0371a82791 ENABLED  heartbeat.jar
 hooks                          v2.16.8    ENABLED  hooks.jar
+messageoftheday                3f65e8bfc6 ENABLED  messageoftheday.jar
 plugin-manager                 v2.15.3-6-g613e25e1b7 ENABLED  plugin-manager.jar
 replication                    v2.16.8    ENABLED  replication.jar
 reviewnotes                    v2.16.8    ENABLED  reviewnotes.jar
 singleusergroup                v2.16.8    ENABLED  singleusergroup.jar
 uploadvalidator                f7b1c59e78 ENABLED  uploadvalidator.jar
+```
+
+Reload plugin after installing - messageoftheday:
+```
+ssh -p 29418 admin@localhost gerrit plugin reload messageoftheday
 ```
 
 Install heartbeat.jar plugin: </br>

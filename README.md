@@ -3,6 +3,8 @@
 ## GERRITCODEREVIEW
 
 **Great Links** </br>
+Documentation: https://gerrit-documentation.storage.googleapis.com/Documentation/2.16.8/index.html
+Plugins: https://gerrit-documentation.storage.googleapis.com/Documentation/2.16.8/config-plugins.html
 Tutorial: https://www.mediawiki.org/wiki/Gerrit/Tutorial#Set_Up_SSH_Keys_in_Gerrit </br>
 Gerrit in production: https://github.com/GerritCodeReview/docker-gerrit
 
@@ -23,6 +25,60 @@ Step 2: get ssh up and running, add private key to agent and check gerrit versio
 eval `ssh-agent`
 ssh-add .ssh/id_rsa
 ssh -p 29418 admin@localhost gerrit version
+```
+
+**Gerrit plugins** </br>
+List all plugins: 
+```
+ssh -p 29418 admin@localhost gerrit plugin ls
+```
+
+Install plugin: </br>
+```
+ssh -p 29418 admin@localhost gerrit plugin install -n its-jira.jar https://gerrit-ci.gerritforge.com/view/Plugins-stable-2.16/job/plugin-its-jira-bazel-stable-2.16/lastSuccessfulBuild/artifact/bazel-bin/plugins/its-jira/its-jira.jar
+```
+
+Install its-jira plugin - tail log: </br>
+```
+docker logs 1b7ee3d03e4a
+```
+
+Install its-jira plugin - tail log - output: </br>
+```
+com.google.gerrit.server.plugins.PluginInstallException: No valid Jira server configuration was found for project 'All-Projects'
+.Missing one or more configuration values: url: null, username: null, password: null
+	at com.google.gerrit.server.plugins.PluginLoader.runPlugin(PluginLoader.java:516)
+	at com.google.gerrit.server.plugins.PluginLoader.installPluginFromStream(PluginLoader.java:190)
+	at com.google.gerrit.sshd.commands.PluginInstallCommand.doRun(PluginInstallCommand.java:85)
+	at com.google.gerrit.sshd.commands.PluginAdminSshCommand.run(PluginAdminSshCommand.java:34)
+	at com.google.gerrit.sshd.SshCommand$1.run(SshCommand.java:44)
+	at com.google.gerrit.sshd.BaseCommand$TaskThunk.run(BaseCommand.java:463)
+	at com.google.gerrit.server.logging.LoggingContextAwareRunnable.run(LoggingContextAwareRunnable.java:83)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at com.google.gerrit.server.git.WorkQueue$Task.run(WorkQueue.java:646)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.RuntimeException: No valid Jira server configuration was found for project 'All-Projects'
+.Missing one or more configuration values: url: null, username: null, password: null
+	at com.googlesource.gerrit.plugins.its.jira.JiraItsServer.getFacade(JiraItsServer.java:60)
+	at com.googlesource.gerrit.plugins.its.jira.JiraItsStartupHealthcheck.start(JiraItsStartupHealthcheck.java:43)
+	at com.google.gerrit.lifecycle.LifecycleManager.start(LifecycleManager.java:95)
+	at com.google.gerrit.server.plugins.ServerPlugin.startPlugin(ServerPlugin.java:246)
+	at com.google.gerrit.server.plugins.ServerPlugin.start(ServerPlugin.java:175)
+	at com.google.gerrit.server.plugins.PluginLoader.runPlugin(PluginLoader.java:495)
+	... 14 more
+fatal: Plugin failed to install. Cause: No valid Jira server configuration was found for project 'All-Projects'
+.Missing one or more configuration values: url: null, username: null, password: null
+
+</br>
+</br>
+
+[2020-01-29 22:47:48,409] [SSH gerrit plugin install -n its-jira.jar https://gerrit-ci.gerritforge.com/view/Plugins-stable-2.16/job/plugin-its-jira-bazel-stable-2.16/lastSuccessfulBuild/artifact/bazel-bin/plugins/its-jira/its-jira.jar (admin)] WARN  com.google.gerrit.server.plugins.PluginLoader : Plugin provides its own name: <its-jira>, use it instead of the input name: <its-jira.jar>
+[2020-01-29 22:47:48,597] [SSH gerrit plugin install -n its-jira.jar https://gerrit-ci.gerritforge.com/view/Plugins-stable-2.16/job/plugin-its-jira-bazel-stable-2.16/lastSuccessfulBuild/artifact/bazel-bin/plugins/its-jira/its-jira.jar (admin)] INFO  com.googlesource.gerrit.plugins.its.jira.JiraModule : JIRA is configured as ITS
 ```
 
 

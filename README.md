@@ -683,12 +683,12 @@ Interactive container with shell:
 ```
 ## Linux commands 
 Write to a file when there are no vi vim nano: 
-`
+```
 $ cat > resolv.conf
 search comapny.int
 nameserver 11.22.33.44
 nameserver 11.22.33.55
-`
+```
 
 Press Ctrl+C to exit and save
 

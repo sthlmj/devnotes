@@ -681,7 +681,16 @@ Interactive container with shell:
 `docker rm $(docker ps -aq)` ~ remove all container with docker ps -aq as argument.
 `docker rmi $(docker images -q)` ~ doing the same for all the images.
 ```
+## Linux commands 
+Write to a file when there are no vi vim nano: 
+`
+$ cat > resolv.conf
+search comapny.int
+nameserver 11.22.33.44
+nameserver 11.22.33.55
+`
 
+Press Ctrl+C to exit and save
 
 ## Kanban vs. Scrum 
 Scrum and Kanban are both iterative work systems that rely on process flows and aim to reduce waste. However; there are a few main differences between the two:

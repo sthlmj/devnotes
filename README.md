@@ -690,7 +690,7 @@ nameserver 11.22.33.44
 nameserver 11.22.33.55
 ```
 
-Press Ctrl+C to exit and save
+Press Ctrl+D to exit and save
 
 ## Kanban vs. Scrum 
 Scrum and Kanban are both iterative work systems that rely on process flows and aim to reduce waste. However; there are a few main differences between the two:

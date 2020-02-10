@@ -178,6 +178,7 @@ fatal: Plugin failed to install. Cause: No valid Jira server configuration was f
 https://rehansaeed.com/tag/docker-compose/ </br>
 https://logz.io/blog/metricbeat-tutorial/ </br>
 https://itnext.io/deploy-elk-stack-in-docker-to-monitor-containers-c647d7e2bfcd </br>
+https://qbox.io/blog/monitoring-docker-containers-with-metricbeat-elasticsearch-and-kibana </br>
 
 **Installing ELK-B:**
 

@@ -10,7 +10,9 @@ Tutorials: https://learnk8s.io/blog/installing-docker-and-kubernetes-on-windows
 PowerShell install Chocolatey:
 
 ```
-PS> Set-ExecutionPolicy
+PS> Set-ExecutionPolicy Bypass -Scope Process -Force
+PS> iex ((New-Object System.Net.WebClient).
+  DownloadString('https://chocolatey.org/install.ps1'))
 ```
 
 ## GERRITCODEREVIEW

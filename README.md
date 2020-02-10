@@ -1,5 +1,18 @@
 # Welcome to SthlmJ DevNotes
 
+
+## Kubernetes + Chocolatey 🍫 
+
+**Great Links** </br>
+Tutorials: https://learnk8s.io/blog/installing-docker-and-kubernetes-on-windows
+
+**Chocolatey on Windows** </br>
+PowerShell install Chocolatey:
+
+```
+PS> Set-ExecutionPolicy
+```
+
 ## GERRITCODEREVIEW
 
 **Great Links** </br>

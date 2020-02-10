@@ -1,7 +1,7 @@
 # Welcome to SthlmJ DevNotes
 
 
-## Kubernetes + Chocolatey 🍫 
+## Kubernetes + Chocolatey 🍫 </br>
 
 With Kubernetes you can easily manage all your containers from one source.  Ok I into this with Chocolatey, it enables you to manage windows nodes almost like it was a Linux machine considering that Chocolatey is a package/software management service for windows.
 **Great Links** </br>

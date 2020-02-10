@@ -1,9 +1,9 @@
 # Welcome to SthlmJ DevNotes
 
 
-## Kubernetes + Chocolatey 🍫
+## Puppet + Kubernetes + Chocolatey 🍫
 
-With Kubernetes you can easily manage all your containers from one source.  Ok I into this with Chocolatey, it enables you to manage windows nodes almost like it was a Linux machine considering that Chocolatey is a package/software management service for windows.
+With Kubernetes you can orchestrate your containers from one source.  Together with Puppet and Chocolatey, it enables you to manage windows nodes almost like it was a Linux machine considering that Chocolatey is a package/software management service for windows and that Puppet is a Configuration Management automation tools with YML.
 </br>
 </br>
 **Great Links** </br>

@@ -21,11 +21,11 @@ PS> iex ((New-Object System.Net.WebClient).
 ## GERRITCODEREVIEW
 
 **Great Links** </br>
-Documentation: https://gerrit-documentation.storage.googleapis.com/Documentation/2.16.8/index.html
-Plugins: https://gerrit-documentation.storage.googleapis.com/Documentation/2.16.8/config-plugins.html
+Documentation: https://gerrit-documentation.storage.googleapis.com/Documentation/2.16.8/index.html </br>
+Plugins: https://gerrit-documentation.storage.googleapis.com/Documentation/2.16.8/config-plugins.html </br>
 Tutorial: https://www.mediawiki.org/wiki/Gerrit/Tutorial#Set_Up_SSH_Keys_in_Gerrit </br>
-Gerrit in production: https://github.com/GerritCodeReview/docker-gerrit
-
+Gerrit in production: https://github.com/GerritCodeReview/docker-gerrit </br>
+</br>
 **Gerrit plug-n-play in docker** </br>
 Quickly gets gerrit up n running to test it out: 
 ```

@@ -1,7 +1,7 @@
 # Welcome to SthlmJ DevNotes
 
 
-## Keytool, OpenSSL, Root Certificates, Trusted Certificate Authorities (CA), Intermediate Certificates, Root Program
+## Keytool, OpenSSL, Root Certificates, Trusted Certificate Authorities (CA), Intermediate Certificates, Root Program 🔐 
 
 Keytool and OpenSSL are both crypto key generator tools, but Keytool has additional feature of manipulating Java's preferred key storage format, the "KeyStore". </br>
 Java prefers to work with keys and certa stored in KeyStore (TrustStore) = Use KeyStore when working with java apps. OpenSSL does work with standard formats(PEM/CER/CRT/PKCS/etc) but does not manipulate KeyStore files. </br>
@@ -19,9 +19,16 @@ Link: </br>
 Code part:
 
 ```
-$ keytool 
+List trusted CA:
+$ keytool -list -v -keystore $JAVA_HOME/jre/lib/security/cacerts
+
+Import new CA into Trusted Certs:
+$ keytool -import -trustcacerts -file /path/to/ca/ca.pem -alias CA_ALIAS -keystore $JAVA_HOME/jre/lib/security/cacerts
 $ OpenSSL 
 ```
+
+Windows:
+Win+R > certmgr.msc
 
 
 ## Puppet + Kubernetes + Chocolatey 🍫

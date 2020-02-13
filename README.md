@@ -1,6 +1,30 @@
 # Welcome to SthlmJ DevNotes
 
 
+## Keytool, OpenSSL, Root Certificates, Trusted Certificate Authorities (CA), Intermediate Certificates, Root Program
+
+Keytool and OpenSSL are both crypto key generator tools, but Keytool has additional feature of manipulating Java's preferred key storage format, the "KeyStore". </br>
+Java prefers to work with keys and certa stored in KeyStore (TrustStore) = Use KeyStore when working with java apps. OpenSSL does work with standard formats(PEM/CER/CRT/PKCS/etc) but does not manipulate KeyStore files. </br>
+Root Certificate - a root ssl certificate is a certificate signed by a trusted certificate authorities (CA). Anyone can generate a signing key and sign certs. But not considered valid unless it has been directly or indirectly signed by a trusted CA. 
+A trusted CA is an entity/organization that has been entitled to verify that is effectively who it declares to be. In order for this model to work, all the participants on the game must agree on a set of CA which they trust. 
+All operating systems and most web browsers ship 🚢 with a set of trusted CA. SSL is based on a chain of trust. When a device validates a certificate, it compares the certificate issuer with the set list of trusted CAs. 
+If a match is not found, the client will then check to see if the certificate of the issuing CA was issued by a trusted CA, and so on (with intermediates certificates) until the end of the certificate chain. The top of the chain, the root certificate must be issued by Certificate Authorities.
+Root Program aka. Trusted Root is at the center of the trust model under public key infrastructure, and by extension SSL/TLS. Root Programs are root stories that are preloaded with root certificates and their public keys.
+</br>
+</br>
+**Great Links** </br>
+Tutorials: https://learnk8s.io/blog/installing-docker-and-kubernetes-on-windows
+
+**Chocolatey on Windows** </br>
+PowerShell install Chocolatey:
+
+```
+PS> Set-ExecutionPolicy Bypass -Scope Process -Force
+PS> iex ((New-Object System.Net.WebClient).
+  DownloadString('https://chocolatey.org/install.ps1'))
+```
+
+
 ## Puppet + Kubernetes + Chocolatey 🍫
 
 With Kubernetes you can orchestrate your containers from one source.  Together with Puppet and Chocolatey, it enables you to manage windows nodes almost like it was a Linux machine considering that Chocolatey is a package/software management service for windows and that Puppet is a Configuration Management automation tools with YML.

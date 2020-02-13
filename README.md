@@ -24,7 +24,9 @@ $ keytool -list -v -keystore $JAVA_HOME/jre/lib/security/cacerts
 
 Import new CA into Trusted Certs:
 $ keytool -import -trustcacerts -file /path/to/ca/ca.pem -alias CA_ALIAS -keystore $JAVA_HOME/jre/lib/security/cacerts
-$ OpenSSL 
+
+Inspect a certificate:
+$ OpenSSL x509 -in se00-name00.cer -text -noout
 ```
 
 Windows:

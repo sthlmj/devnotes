@@ -13,15 +13,14 @@ Root Program aka. Trusted Root is at the center of the trust model under public 
 </br>
 </br>
 **Great Links** </br>
-Tutorials: https://learnk8s.io/blog/installing-docker-and-kubernetes-on-windows
+Link: </br>
 
-**Chocolatey on Windows** </br>
-PowerShell install Chocolatey:
+**Generate, import trusted certificates** </br>
+Code part:
 
 ```
-PS> Set-ExecutionPolicy Bypass -Scope Process -Force
-PS> iex ((New-Object System.Net.WebClient).
-  DownloadString('https://chocolatey.org/install.ps1'))
+$ keytool 
+$ OpenSSL 
 ```
 
 

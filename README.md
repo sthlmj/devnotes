@@ -1,20 +1,30 @@
-# Welcome to SthlmJ DevNotes
+</br># Welcome to SthlmJ DevNotes
 
 
 ## Keytool, OpenSSL, Root Certificates, Trusted Certificate Authorities (CA), Intermediate Certificates, Root Program 🔐 
 
-Keytool and OpenSSL are both crypto key generator tools, but Keytool has additional feature of manipulating Java's preferred key storage format, the "KeyStore". </br>
-Java prefers to work with keys and certa stored in KeyStore (TrustStore) = Use KeyStore when working with java apps. OpenSSL does work with standard formats(PEM/CER/CRT/PKCS/etc) but does not manipulate KeyStore files. </br>
-Root Certificate - a root ssl certificate is a certificate signed by a trusted certificate authorities (CA). Anyone can generate a signing key and sign certs. But not considered valid unless it has been directly or indirectly signed by a trusted CA. 
-A trusted CA is an entity/organization that has been entitled to verify that is effectively who it declares to be. In order for this model to work, all the participants on the game must agree on a set of CA which they trust. 
-All operating systems and most web browsers ship 🚢 with a set of trusted CA. SSL is based on a chain of trust. When a device validates a certificate, it compares the certificate issuer with the set list of trusted CAs. 
-If a match is not found, the client will then check to see if the certificate of the issuing CA was issued by a trusted CA, and so on (with intermediates certificates) until the end of the certificate chain. The top of the chain, the root certificate must be issued by Certificate Authorities.
+Keytool and OpenSSL are both crypto key generator tools, but Keytool has additional feature of manipulating Java's preferred key storage format, the "KeyStore". </br></br>
+Java prefers to work with keys and certa stored in KeyStore (TrustStore) = Use KeyStore when working with java apps. OpenSSL does work with standard formats(PEM/CER/CRT/PKCS/etc) but does not manipulate KeyStore files. </br></br>
+Root Certificate - a root ssl certificate is a certificate signed by a trusted certificate authorities (CA). Anyone can generate a signing key and sign certs. But not considered valid unless it has been directly or indirectly signed by a trusted CA. </br></br>
+A trusted CA is an entity/organization that has been entitled to verify that is effectively who it declares to be. In order for this model to work, all the participants on the game must agree on a set of CA which they trust. </br></br>
+All operating systems and most web browsers ship 🚢 with a set of trusted CA. SSL is based on a chain of trust. When a device validates a certificate, it compares the certificate issuer with the set list of trusted CAs. </br></br>
+If a match is not found, the client will then check to see if the certificate of the issuing CA was issued by a trusted CA, and so on (with intermediates certificates) until the end of the certificate chain. The top of the chain, the root certificate must be issued by Certificate Authorities.</br></br>
 Root Program aka. Trusted Root is at the center of the trust model under public key infrastructure, and by extension SSL/TLS. Root Programs are root stories that are preloaded with root certificates and their public keys.
 </br>
 </br>
 **Great Links** </br>
 Link: </br>
-
+https://www.sslshopper.com/article-most-common-java-keytool-keystore-commands.html</br>
+https://www.sslshopper.com/article-most-common-openssl-commands.html</br>
+https://manuals.gfi.com/en/kerio/connect/content/server-configuration/ssl-certificates/adding-trusted-root-certificates-to-the-server-1605.html </br>
+https://www.watchguard.com/help/docs/ssl/3/en-us/content/en-us/manage_system/active_directory_auth_w-ldap-ssl.html</br>
+https://security.stackexchange.com/questions/98282/difference-between-openssl-and-keytool</br>
+https://www.thesslstore.com/blog/root-certificates-intermediate/</br>
+https://support.dnsimple.com/articles/what-is-ssl-root-certificate/</br>
+https://www.top-password.com/blog/view-installed-certificates-in-windows-10-8-7/</br>
+https://serverfault.com/questions/590870/how-to-view-all-ssl-certificates-in-a-bundle</br>
+https://en.wikipedia.org/wiki/Root_certificate</br>
+https://stackoverflow.com/questions/25156180/how-to-list-certificates-trusted-by-openssl</br></br>
 **Generate, import trusted certificates** </br>
 Code part:
 

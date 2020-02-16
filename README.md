@@ -536,6 +536,8 @@ services:
       - "5000:5000"
   redis:
     image: "redis:alpine"
+  privileged: true
+  user: root
 ```
 This Compose file defines two services: web and redis.
 
@@ -544,6 +546,12 @@ The web service uses an image that’s built from the Dockerfile in the current 
 
 Redis service
 The redis service uses a public Redis image pulled from the Docker Hub registry.
+
+privileged: true
+When running in selinux
+
+user: root
+sometimes jenkins inside the container needs to have access to certain folders.
 
 #### Step 4: Build and run your app with Compose
 1. From your project directory, start up your application by running docker-compose up.

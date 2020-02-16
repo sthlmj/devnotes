@@ -744,6 +744,14 @@ Interactive container with shell:
 `docker stop $(docker ps -aq)` ~ running docker stop as an argument.
 `docker rm $(docker ps -aq)` ~ remove all container with docker ps -aq as argument.
 `docker rmi $(docker images -q)` ~ doing the same for all the images.
+
+See full command of running/stopped container in Docker:
+Use runlike from git repo: https://github.com/lavie/runlike
+
+`pip install runlike` Install Runlike
+`docker ps -a -q` Find the container ID
+`runlike CONTAINERID` Extract complete docker run command
+
 ```
 ## Linux commands 
 Write to a file when there are no vi vim nano: 

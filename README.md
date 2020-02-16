@@ -229,6 +229,10 @@ Step 2: Deploy containers</br>
 Step 3: check logs</br>
 </br></br>
 
+
+![MetricBeats in Kibana](https://github.com/sthlmj/devnotes/blob/master/Annotation%202020-02-16%20230825.png)
+
+
 ElasticSearch Successful logs:
 ```
 PS C:\> docker logs cc41723db121
@@ -774,10 +778,6 @@ Exiting: Error importing Kibana dashboards: fail to create the Kibana loader: Er
 2020-02-16T21:53:17.656Z        INFO    instance/beat.go:736    Kibana dashboards successfully loaded.
 2020-02-16T21:53:17.656Z        INFO    instance/beat.go:402    metricbeat start running.
 ```
-
-
-
-
 
 
 **The hard way - Installing ELK-B:**

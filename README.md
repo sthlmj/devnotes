@@ -38,7 +38,7 @@ $ keytool -import -alias myca -keystore /usr/lib/jvm/java-8-openjdk-amd64/jre/li
 
 Inspect a certificate:
 $ OpenSSL x509 -in se00-name00.cer -text -noout
-$ echo | openssl s_client -showcerts -servername gnupg.org -connect gnupg.org:443 2>/dev/null | openssl x509 -inform pem -noout -text
+$ echo | openssl s_client -showcerts -servername gnupg.org -connect nsa.gov:443 2>/dev/null | openssl x509 -inform pem -noout -text
 ```
 
 Windows:

@@ -1,5 +1,4 @@
-</br># Welcome to SthlmJ DevNotes
-
+# Welcome to SthlmJ DevNotes
 
 ## Keytool, OpenSSL, Root Certificates, Trusted Certificate Authorities (CA), Intermediate Certificates, Root Program 🔐 
 

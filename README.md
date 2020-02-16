@@ -227,11 +227,10 @@ https://qbox.io/blog/monitoring-docker-containers-with-metricbeat-elasticsearch-
 Step 1: Write some docker-compose.yml that consists for EKB</br>
 Step 2: Deploy containers</br>
 Step 3: check logs</br>
-</br></br>
-
-
+</br>
+When it works outside the prem: 
 ![MetricBeats in Kibana](https://github.com/sthlmj/devnotes/blob/master/Annotation%202020-02-16%20230825.png)
-
+</br>
 
 ElasticSearch Successful logs:
 ```

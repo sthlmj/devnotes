@@ -416,8 +416,9 @@ TODOOOOOOOOTODOOOOOOOOTODOOOOOOOO
 TODOOOOOOOOTODOOOOOOOOTODOOOOOOOO
 
 ### Jenkins Master - Agent Setup:
-TODOOOOOOOOTODOOOOOOOOTODOOOOOOOO
-TODOOOOOOOOTODOOOOOOOOTODOOOOOOOO
+Link: https://plugins.jenkins.io/swarm </br>
+Swarm plugin is the easiest way to utilize master-agent configurations. 
+
 
 Example:
 https://wiki.jenkins.io/display/JENKINS/Step+by+step+guide+to+set+up+master+and+agent+machines+on+Windows

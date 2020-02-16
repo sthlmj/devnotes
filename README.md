@@ -224,10 +224,10 @@ https://itnext.io/deploy-elk-stack-in-docker-to-monitor-containers-c647d7e2bfcd 
 https://qbox.io/blog/monitoring-docker-containers-with-metricbeat-elasticsearch-and-kibana </br>
 
 **The docker-compose way - Installing ELK-B:**
-Step 1: Write some docker-compose.yml that consists for EKB
-Step 2: Deploy containers
-Step 3: check logs
-
+Step 1: Write some docker-compose.yml that consists for EKB</br>
+Step 2: Deploy containers</br>
+Step 3: check logs</br>
+</br></br>
 
 ElasticSearch Successful logs:
 ```

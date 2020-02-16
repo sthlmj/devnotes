@@ -934,6 +934,58 @@ Admin Documentation link: https://girder.readthedocs.io/en/stable/installation.h
 
 ## Jenkins stuff
 
+**Dockerized Jenkins**
+Visit jenkins container at: http://localhost:8080/jenkins or similar
+
+```
+PS C:\> docker logs fcec621fc440
+Running from: /usr/share/jenkins/jenkins.war
+webroot: EnvVars.masterEnvVars.get("JENKINS_HOME")
+2020-02-16 23:16:23.945+0000 [id=1]     INFO    org.eclipse.jetty.util.log.Log#initialized: Logging initialized @785ms to org.eclipse.jetty.util.log.JavaUtilLog
+2020-02-16 23:16:24.078+0000 [id=1]     INFO    winstone.Logger#logInternal: Beginning extraction from war file
+2020-02-16 23:16:25.499+0000 [id=1]     INFO    org.eclipse.jetty.server.Server#doStart: jetty-9.4.z-SNAPSHOT; built: 2019-05-02T00:04:53.875Z; git: e1bc35120a6617ee3df052294e433f3a25ce7097; jvm 1.8.0_242-b08
+2020-02-16 23:16:25.810+0000 [id=1]     INFO    o.e.j.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /jenkins, did not find org.eclipse.jetty.jsp.JettyJspServlet
+2020-02-16 23:16:25.864+0000 [id=1]     INFO    o.e.j.s.s.DefaultSessionIdManager#doStart: DefaultSessionIdManager workerName=node0
+2020-02-16 23:16:25.864+0000 [id=1]     INFO    o.e.j.s.s.DefaultSessionIdManager#doStart: No SessionScavenger set, using defaults
+2020-02-16 23:16:25.874+0000 [id=1]     INFO    o.e.j.server.session.HouseKeeper#startScavenging: node0 Scavenging every 660000ms
+2020-02-16 23:16:26.131+0000 [id=1]     INFO    hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+2020-02-16 23:16:26.277+0000 [id=1]     INFO    o.e.j.s.handler.ContextHandler#doStart: Started w.@26be6ca7{Jenkins v2.204.2,/jenkins,file:///var/jenkins_home/war/,AVAILABLE}{/var/jenkins_home/war}
+2020-02-16 23:16:26.318+0000 [id=1]     INFO    o.e.j.server.AbstractConnector#doStart: Started ServerConnector@19932c16{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2020-02-16 23:16:26.318+0000 [id=1]     INFO    org.eclipse.jetty.server.Server#doStart: Started @3158ms
+2020-02-16 23:16:26.319+0000 [id=20]    INFO    winstone.Logger#logInternal: Winstone Servlet Engine v4.0 running: controlPort=disabled
+2020-02-16 23:16:27.919+0000 [id=27]    INFO    jenkins.InitReactorRunner$1#onAttained: Started initialization
+2020-02-16 23:16:27.948+0000 [id=27]    INFO    jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+2020-02-16 23:16:28.863+0000 [id=27]    INFO    jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+2020-02-16 23:16:28.873+0000 [id=26]    INFO    jenkins.InitReactorRunner$1#onAttained: Started all plugins
+2020-02-16 23:16:28.887+0000 [id=26]    INFO    jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+2020-02-16 23:16:29.598+0000 [id=27]    INFO    jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+2020-02-16 23:16:29.634+0000 [id=41]    INFO    hudson.model.AsyncPeriodicWork#lambda$doRun$0: Started Download metadata
+2020-02-16 23:16:29.683+0000 [id=41]    INFO    hudson.util.Retrier#start: Attempt #1 to do the action check updates server
+2020-02-16 23:16:30.678+0000 [id=28]    INFO    o.s.c.s.AbstractApplicationContext#prepareRefresh: Refreshing org.springframework.web.context.support.StaticWebApplicationContext@1a3cb80c: display name [Root WebApplicationContext]; startup date [Sun Feb 16 23:16:30 UTC 2020]; root of context hierarchy
+2020-02-16 23:16:30.679+0000 [id=28]    INFO    o.s.c.s.AbstractApplicationContext#obtainFreshBeanFactory: Bean factory for application context [org.springframework.web.context.support.StaticWebApplicationContext@1a3cb80c]: org.springframework.beans.factory.support.DefaultListableBeanFactory@61c63c12
+2020-02-16 23:16:30.686+0000 [id=28]    INFO    o.s.b.f.s.DefaultListableBeanFactory#preInstantiateSingletons: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@61c63c12: defining beans [authenticationManager]; root of factory hierarchy
+2020-02-16 23:16:30.837+0000 [id=28]    INFO    o.s.c.s.AbstractApplicationContext#prepareRefresh: Refreshing org.springframework.web.context.support.StaticWebApplicationContext@412b2401: display name [Root WebApplicationContext]; startup date [Sun Feb 16 23:16:30 UTC 2020]; root of context hierarchy
+2020-02-16 23:16:30.838+0000 [id=28]    INFO    o.s.c.s.AbstractApplicationContext#obtainFreshBeanFactory: Bean factory for application context [org.springframework.web.context.support.StaticWebApplicationContext@412b2401]: org.springframework.beans.factory.support.DefaultListableBeanFactory@3d653ef
+2020-02-16 23:16:30.838+0000 [id=28]    INFO    o.s.b.f.s.DefaultListableBeanFactory#preInstantiateSingletons: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3d653ef: defining beans [filter,legacy]; root of factory hierarchy
+2020-02-16 23:16:31.110+0000 [id=28]    INFO    jenkins.install.SetupWizard#init:
+
+*************************************************************
+*************************************************************
+*************************************************************
+
+Jenkins initial setup is required. An admin user has been created and a password generated.
+Please use the following password to proceed to installation:
+
+74e7dcc7dbaf4534a2b38dd
+
+This may also be found at: /var/jenkins_home/secrets/initialAdminPassword
+
+*************************************************************
+*************************************************************
+*************************************************************
+```
+
+
 **Jenkins Configuration AS Code**:
 With Jenkins Configuration AS Code [JCASC](https://github.com/jenkinsci/configuration-as-code-plugin/blob/master/README.md) plugin you can configure Jenkins master by code instead of clicking through the GUI. This helps if you needs to do a lot of configuraitons at once. 
 

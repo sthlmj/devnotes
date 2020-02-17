@@ -9,13 +9,14 @@ A trusted CA is an entity/organization that has been entitled to verify that is 
 All operating systems and most web browsers ship 🚢 with a set of trusted CA. SSL is based on a chain of trust. When a device validates a certificate, it compares the certificate issuer with the set list of trusted CAs. </br></br>
 If a match is not found, the client will then check to see if the certificate of the issuing CA was issued by a trusted CA, and so on (with intermediates certificates) until the end of the certificate chain. The top of the chain, the root certificate must be issued by Certificate Authorities.</br></br>
 Root Program aka. Trusted Root is at the center of the trust model under public key infrastructure, and by extension SSL/TLS. Root Programs are root stories that are preloaded with root certificates and their public keys.
-</br>1. truststore = public key + details storage.</br>
+</br>
+1. truststore = public key + details storage.</br>
 Examples: certs stored in a browser, .crt, .cer
 Summary: A truststore is used for what public keys to trust, like cert files.
-</br>
 2. keystore = (public key + details) & (private key + details) storage.</br>
-(Note: Storing the private key is why it requires a password, otherwise your security could be breached easily).
+(Note: Storing the private key is why it requires a password, otherwise your security could be breached easily).</br>
 Examples: .jks, cacerts file, p12 (can be either keystore or truststore)
+</br>
 Summary: A keystore is primarily used as a storage of your public and private keys so that you can perform HTTPS TLS encryption for others, but as shown by cacerts file used by JREs and later versions of JDKs, a keystore can be used as a truststore as well since it has all the details of the truststore.
 </br>
 So, all keystores are truststores, but no truststore is a keystore.

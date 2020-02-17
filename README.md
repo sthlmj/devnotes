@@ -12,11 +12,11 @@ Root Program aka. Trusted Root is at the center of the trust model under public 
 </br>
 1. truststore = public key + details storage.</br>
 Examples: certs stored in a browser, .crt, .cer
-Summary: A truststore is used for what public keys to trust, like cert files.
+Summary: A truststore is used for what public keys to trust, like cert files.</br>
 2. keystore = (public key + details) & (private key + details) storage.</br>
 (Note: Storing the private key is why it requires a password, otherwise your security could be breached easily).</br>
 Examples: .jks, cacerts file, p12 (can be either keystore or truststore)
-</br>
+</br></br>
 Summary: A keystore is primarily used as a storage of your public and private keys so that you can perform HTTPS TLS encryption for others, but as shown by cacerts file used by JREs and later versions of JDKs, a keystore can be used as a truststore as well since it has all the details of the truststore.
 </br>
 So, all keystores are truststores, but no truststore is a keystore.

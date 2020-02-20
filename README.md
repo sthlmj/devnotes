@@ -5,11 +5,11 @@
 CM is a human log/version control system. With goals to improve software development in a most effective way as possible. Like researcher in the laboratory that does experiments, a scientist must know what combinations of ingredients and recipes they already have tested so that they are not re-developing already tested combination. 
 CM produces reports to the project for project progress.
 
-1. Identification - identifierar ändringar i utveckling.
-2. Control - kontrollera ändringar.
-3. Implement - implementera ändringar. Måste köra ändringar i x antal gånger.
-4. Kontrollera resultat ändring. Se till att projekt vet vad dom gör. Track decelopers.
-5. Report results. 
+1. Identification - identifierar ändringar som händer utvecklingnivån/kodnivån.
+2. Control - kontrollera ändringar i kodnivån.
+3. Implement - implementera ändringar. Testköra ändringar ett antal gånger.
+4. Kontrollera resultat ändring. Se till att projekt vet vad dom gör. Håll koll på vad utvecklarna har gjort.
+5. Report results and lessons learned. 
 6. If possible to do, make audit.
 
 ## Keytool, OpenSSL, Root Certificates, Trusted Certificate Authorities (CA), Intermediate Certificates, Root Program 🔐 

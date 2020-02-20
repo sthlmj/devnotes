@@ -2,6 +2,7 @@
 
 ## Configuration Management 🔬
 
+CM in this context is Software Development CM. This is not for IT configuration management with puppet chef ansibel!!!
 CM is a human log/version control system. With goals to improve software development in a most effective way as possible. Like researcher in the laboratory that does experiments, a scientist must know what combinations of ingredients and recipes they already have tested so that they are not re-developing already tested combination. 
 CM produces reports to the project for project progress. CM attempts to identify and track all relevant elements of the configuration of a software that are being developed, so that all possible errors and key ingredients (configuration) can be identified and possible solution to the problems found/Find bug root cause. CM then identifies the working version of software and reverts branch to the working one or most interesting finding one.
 
@@ -14,6 +15,9 @@ CM Defect tracking system - Jenkins build logs, pull requests.
 4. Kontrollera resultat ändring. Se till att projekt vet vad dom gör. Håll koll på vad utvecklarna har gjort.
 5. Report results and lessons learned. 
 6. If possible to do, make audit.
+
+CM in this context, !CM for IT systems configurations: 
+https://youtu.be/yTJyONlB_0o
 
 ## Keytool, OpenSSL, Root Certificates, Trusted Certificate Authorities (CA), Intermediate Certificates, Root Program 🔐 
 

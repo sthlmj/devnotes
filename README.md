@@ -1,6 +1,6 @@
 # Welcome to SthlmJ DevNotes
 
-## Configuration Management
+## Configuration Management 🔬
 
 CM is a human log/version control system. With goals to improve software development in a most effective way as possible. Like researcher in the laboratory that does experiments, a scientist must know what combinations of ingredients and recipes they already have tested so that they are not re-developing already tested combination. 
 CM produces reports to the project for project progress. CM attempts to identify and track all relevant elements of the configuration of a software that are being developed, so that all possible errors and key ingredients (configuration) can be identified and possible to the problems found.

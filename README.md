@@ -39,7 +39,7 @@ Examples: .jks, cacerts file, p12 (can be either keystore or truststore)
 Summary: A keystore is primarily used as a storage of your public and private keys so that you can perform HTTPS TLS encryption for others, but as shown by cacerts file used by JREs and later versions of JDKs, a keystore can be used as a truststore as well since it has all the details of the truststore.
 </br>
 So, all keystores are truststores, but no truststore is a keystore.
-</br>
+</br></br>
 To test TLS/SSL connection you can either sign in to your service once ldaps is implemented. But you can also use SSLPoke if you want to check current session: </br>
 https://matthewdavis111.com/java/poke-ssl-test-java-certs/
 </br>

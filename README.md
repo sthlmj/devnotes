@@ -40,9 +40,13 @@ Summary: A keystore is primarily used as a storage of your public and private ke
 </br>
 So, all keystores are truststores, but no truststore is a keystore.
 </br>
+To test TLS/SSL connection you can either sign in to your service once ldaps is implemented. But you can also use SSLPoke if you want to check current session: </br>
+https://matthewdavis111.com/java/poke-ssl-test-java-certs/
+</br>
 </br>
 **Great Links** </br>
 Link: </br>
+https://matthewdavis111.com/java/poke-ssl-test-java-certs/
 https://www.sslshopper.com/article-most-common-java-keytool-keystore-commands.html</br>
 https://www.sslshopper.com/article-most-common-openssl-commands.html</br>
 https://manuals.gfi.com/en/kerio/connect/content/server-configuration/ssl-certificates/adding-trusted-root-certificates-to-the-server-1605.html </br>

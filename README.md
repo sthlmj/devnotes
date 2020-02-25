@@ -2,7 +2,7 @@
 
 ## SELinux
 Additional security layer that controls context of files processes and users. 
-SELinux can be used to control processes, networks and executions of processes.
+SELinux can be used to control processes, networks and execution contexts of processes and files.
 
 ```
 Check current SELinux levels: 

@@ -49,6 +49,7 @@ Check SELinux status of the folder:
 $ ls -lZ /home/z-johnsnow/public
 ```
 
+https://medium.com/lucjuggery/docker-selinux-30-000-foot-view-30f6ef7f621
 
 ## Configuration Management 🔬
 

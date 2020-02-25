@@ -1,5 +1,55 @@
 # Welcome to SthlmJ DevNotes
 
+## SELinux
+Additional security layer that controls context of files processes and users. 
+SELinux can be used to control processes, networks and executions of processes.
+
+```
+Check current SELinux levels: 
+
+Check SELinux status: 
+$ getenforce
+
+Full details: 
+$ sestatus
+
+Path: 
+$ /etc/selinux/config
+
+SE modules boolean: 
+$ semodule -l PIPE less
+
+List modules and boolean status: 
+$ semanage boolean -l PIPE less
+
+Gets current boolean status of a module: 
+$ getsebool ftp_home_dir
+
+Sets boolean status of a module: 
+$ setsebool ftp_home_dir on
+
+Gets current boolean status of a module again to verify changes: 
+$ getsebool ftp_home_dir
+
+Check SELinux status of the folder: 
+$ls -lZ /var/gerrit/
+Gives: system_u:object_r:user_home_t:s0
+Which means: 1. user, 2. role, 3. type of file, 4. selinux level
+
+Allow HTTP servers to connect to other backens: 
+$ setsebool -P httpd_can_network_connect on
+
+Allow HTTP servers to read files from user directory: 
+$ setsebool -P httpd_enable_homedirs on
+
+Allow HTTP servers to read files from user directory:
+$ chcon -Rt httpd_sys_content_t /home/z-johnsnow/public
+
+Check SELinux status of the folder:
+$ ls -lZ /home/z-johnsnow/public
+```
+
+
 ## Configuration Management 🔬
 
 CM in this context is Software Development CM. This is not for IT configuration management with puppet chef ansibel!!!

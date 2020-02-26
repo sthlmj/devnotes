@@ -51,6 +51,16 @@ $ ls -lZ /home/z-johnsnow/public
 
 https://medium.com/lucjuggery/docker-selinux-30-000-foot-view-30f6ef7f621
 
+
+## CodeBeamer
+Test management tool. 
+
+```
+Get it up and running for testing: 
+$ docker run -d -p 8888:80 -p 222:22 intland/codebeamer
+```
+
+
 ## Configuration Management 🔬
 
 CM in this context is Software Development CM. This is not for IT configuration management with puppet chef ansibel!!!

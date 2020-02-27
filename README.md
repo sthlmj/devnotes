@@ -98,6 +98,8 @@ https://matthewdavis111.com/java/poke-ssl-test-java-certs/
 </br>
 **Great Links** </br>
 Link: </br>
+
+https://gist.github.com/4ndrej/4547029 </br>
 https://matthewdavis111.com/java/poke-ssl-test-java-certs/</br>
 https://www.sslshopper.com/article-most-common-java-keytool-keystore-commands.html</br>
 https://www.sslshopper.com/article-most-common-openssl-commands.html</br>

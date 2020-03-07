@@ -42,8 +42,9 @@ $ setsebool -P httpd_can_network_connect on
 Allow HTTP servers to read files from user directory: 
 $ setsebool -P httpd_enable_homedirs on
 
-Allow HTTP servers to read files from user directory:
+Allow HTTP servers to read files from user directory && veenee sandbox SELinux conf:
 $ chcon -Rt httpd_sys_content_t /home/z-johnsnow/public
+$ chcon -Rt svirt_sandbox_file_t /var/db 
 
 Check SELinux status of the folder:
 $ ls -lZ /home/z-johnsnow/public

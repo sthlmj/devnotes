@@ -1110,8 +1110,7 @@ jenkins:
 
 ### Jenkinsfile Pipeline as code:
 Example: 
-TODOOOOOOOOTODOOOOOOOOTODOOOOOOOO
-TODOOOOOOOOTODOOOOOOOOTODOOOOOOOO
+https://jenkins.io/doc/book/
 
 ### Jenkins Master - Agent Setup:
 Link: https://plugins.jenkins.io/swarm </br>

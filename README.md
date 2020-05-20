@@ -1137,7 +1137,7 @@ def uploadSpec = """{
 }"""
 
 
-node('playground')
+node('sandbox')
 {
         stage ('Archive')
         {
@@ -1147,8 +1147,7 @@ node('playground')
 }
 
 ```
-
-Terminology - What is an artifact: https://devops.stackexchange.com/questions/1898/what-is-an-artifactory
+Artifactory REST API documentation: https://www.jfrog.com/confluence/display/JFROG/Artifactory+REST+API
 
 ## GitLab stuff
 Pulling GitLab CE in docker: 

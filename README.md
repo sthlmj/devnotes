@@ -1122,8 +1122,31 @@ https://wiki.jenkins.io/display/JENKINS/Step+by+step+guide+to+set+up+master+and+
 
 
 ## Binary Repository Manager - Artifactory stuff
-TODOOOOOOOOTODOOOOOOOOTODOOOOOOOO
-TODOOOOOOOOTODOOOOOOOOTODOOOOOOOO
+Jenkins deploy to artifactory:
+```
+def server = Artifactory.server '-123456789@1234567890123456'
+
+/*json of uploadSpec, called by 'Deploy' stage*/
+def uploadSpec = """{
+  "files": [
+    {
+      "pattern": "*.h",
+      "target": "builds/my-project/"
+    }
+  ]
+}"""
+
+
+node('playground')
+{
+        stage ('Archive')
+        {
+            archiveArtifacts artifacts: '**/*.h'
+			server.upload spec: uploadSpec, failNoOp: true
+        }
+}
+
+```
 
 Terminology - What is an artifact: https://devops.stackexchange.com/questions/1898/what-is-an-artifactory
 

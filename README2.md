@@ -31,7 +31,6 @@ A commit is the last step in our Git workflow. A commit permanently stores chang
 `git log`
 Often with Git, you’ll need to refer back to an earlier version of a project. Commits are stored chronologically in the repository and can be viewed with `git log`
 In the output, notice:
-
 A 40-character code, called a SHA, that uniquely identifies the commit. This appears in orange text.
 The commit author (you!)
 The date and time of the commit

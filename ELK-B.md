@@ -3,6 +3,8 @@
 **ACHTUNG!** </br>
 In corporate environment, check firewalld or equivalent firewall rules when deploying metricbeat on same machine as ELK stack since this is anti pattern of ELK-B stack! Nothing has to be done if deploy on other machines shipping metrics to ELK stack on different machine.
 
+For service monitoring like docker and apache webserver or girder, use heartbeat.
+
 **Elastic Kibana -Beats** </br>
 https://rehansaeed.com/tag/docker-compose/ </br>
 https://logz.io/blog/metricbeat-tutorial/ </br>

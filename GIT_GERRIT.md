@@ -335,14 +335,15 @@ will delete the specified branch from your Git project.
 ```
 $ git branch -d fencing
 Deleted branch fencing (was 9c955d3).
-```
-</br>
-### Generalizations
+``` 
+
+### Generalizations 
 Let’s take a moment to review the main concepts and commands before moving on.
-</br></br>
+</br>
 Git branching allows users to experiment with different versions of a project by checking out separate branches to work on.
-The following commands are useful in the Git branch workflow.
 </br></br>
+The following commands are useful in the Git branch workflow.
+</br>
 `git branch`: Lists all a Git project’s branches.</br>
 `git branch branch_name`: Creates a new branch.</br>
 `git checkout branch_name`: Used to switch from one branch to another.</br>

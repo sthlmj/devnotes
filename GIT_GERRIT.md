@@ -54,8 +54,7 @@ Use Git commands to help keep track of changes made to a project:
 
 ## Git - Git Teamwork
 
-TODO: </br>
-Moving git repository with full history: </br>
+## TODO - Moving git repository with full history: </br>
 https://www.atlassian.com/git/tutorials/git-move-repository </ br>
 https://gist.github.com/niksumeiko/8972566 </br>
 https://medium.com/@zeebaig/how-to-migrate-git-repository-with-branches-and-commit-history-dd129fd36dca </br>

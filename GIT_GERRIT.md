@@ -205,7 +205,7 @@ You have in essence rewound the project’s history.
 Three different ways to backtrack in Git. You can use these skills to undo changes made to your Git project.</br>
 </br>
 Review the new commands: </br>
-`git checkout HEAD filename`: Discards changes in the working directory.</br>
+`git checkout HEAD filename`: <u>Discards changes in the working directory</u>.</br>
 `git reset HEAD filename`: Unstages file changes in the staging area.</br>
 `git reset commit_SHA`: Resets to a previous commit in your commit history.</br>
 Additionally, you now have a way to add multiple files to the staging area with a single command:

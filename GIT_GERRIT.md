@@ -368,7 +368,7 @@ Fast-forward
 ```
 
 ## Git - Git Teamwork 
-So far, we’ve learned how to work on Git as a single user. Git offers a suite of collaboration tools to make working with others on a project easier.
+So far, we’ve worked on Git as a single user. Git offers a suite of collaboration tools to make working with others on a project easier.
 
 Imagine that you’re a science teacher, developing some quizzes with Sally, another teacher in the school. You are using Git to manage the project.
 

@@ -1,7 +1,7 @@
-# Welcome to the 2nd season of the devnotes!
-Hi there fellas!
+# Git cheatsheet!
+Collection of git command cheatsheet - in details!
 
-## Git
+## Git - Basic git workflows
 
 `git init`
 The word init means initialize. The command sets up all the tools Git needs to begin tracking changes made to the project.
@@ -45,3 +45,11 @@ Use Git commands to help keep track of changes made to a project:
 * `git diff` shows the difference between the working directory and the staging area
 * `git commit` permanently stores file changes from the staging area in the repository
 * `git log` shows a list of all previous commits, newest on top. Check time stamps.
+
+## Git - How to Backtrack in Git
+
+
+## Git - Git Branching
+
+
+## Git - Git Teamwork

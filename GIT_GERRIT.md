@@ -252,7 +252,7 @@ Git backtracking commands lets you: discard changes in the working directory, go
 
 ## Git - Git Branching 
 Up to this point, you’ve worked in a single Git branch called master. Git allows us to create branches to experiment with versions of a project. Imagine you want to create version of a story with a happy ending. You can create a new branch and make the happy ending changes to that branch only. It will have no effect on the master branch until you’re ready to merge the happy ending to the master branch.
-</br>
+</br></br>
 Using Git branching to develop multiple versions of a resumé.
 </br>
 You can use the command below to answer the question: “which branch am I on?”

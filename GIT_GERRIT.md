@@ -212,6 +212,9 @@ Additionally, you now have a way to add multiple files to the staging area with 
 </br>
 `git add filename_1 filename_2`
 </br>
+
+Commonly used shortcut for `git checkout HEAD filename`: </br> 
+`git checkout -- filename`
 </br>
 ## Git - Git Branching
 

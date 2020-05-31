@@ -46,6 +46,28 @@ Use Git commands to help keep track of changes made to a project:
 * `git commit` permanently stores file changes from the staging area in the repository
 * `git log` shows a list of all previous commits, newest on top. Check time stamps.
 
+</br></br>
+1. Adds untracked files to staging area: </br> `git add *.txt` </br>
+2. re-add files to staging area when changes are made to already tracked files: </br>
+`git add disclaimer.txt` </br>
+3. `git log` again to see changes:
+
+$ git log
+`commit 3601380b9d6508dba745b90e413357a877d8551
+e
+Author: codecademy <ccuser@codecademy.com>
+Date:   Sun May 31 07:13:41 2020 +0000
+
+    Added warning text
+
+commit 7b28b205f22d26e963dde81dddc55f84fc51e14
+9
+Author: codecademy <ccuser@codecademy.com>
+Date:   Sun May 31 07:07:38 2020 +0000
+
+    committing files
+`
+
 ## Git - How to Backtrack in Git
 
 

@@ -258,6 +258,14 @@ Using Git branching to develop multiple versions of a resumé.
 You can use the command below to answer the question: “which branch am I on?”
 `git branch`
 </br>
+The diagram illustrates branching.
+
+The circles are commits, and together form the Git project’s commit history.
+New Branch is a different version of the Git project. It contains commits from Master but also has commits that Master does not have.
+
+![Git branching](https://github.com/sthlmj/devnotes/blob/master/Screenshot%202020-05-31%20at%2012.44.34.png?raw=true)
+
+
 ## Git - Git Teamwork
 
 ## TODO - Moving git repository with full history: </br>

@@ -192,7 +192,17 @@ M       scene-2.txt
 M       scene-3.txt
 M       scene-7.txt
 ```
-</br></br>
+</br>
+Before reset:</br>
+</br>
+HEAD is at the most recent commit</br>
+After resetting:</br>
+</br>
+HEAD goes to a previously made commit of your choice
+The gray commits are no longer part of your project
+You have in essence rewound the project’s history
+</br>
+</br>
 ## Git - Git Branching
 
 

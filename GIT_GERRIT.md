@@ -325,6 +325,14 @@ $ git commit -m "Resolving merge conflict"
 [master 3517438] Resolving merge conflict
 ```
 
+### git delete branch
+In Git, branches are usually a means to an end. You create them to work on a new project feature, but the end goal is to merge that feature into the master branch. After the branch has been integrated into master, it has served its purpose and can be deleted.
+</br></br>
+The command
+</br>
+`git branch -d branch_name`
+will delete the specified branch from your Git project.
+</br></br></br></br>
 
 
 ## Git - Git Teamwork

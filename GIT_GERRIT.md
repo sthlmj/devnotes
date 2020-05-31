@@ -265,10 +265,10 @@ New Branch is a different version of the Git project. It contains commits from M
 
 ![Git branching](https://github.com/sthlmj/devnotes/blob/master/Screenshot%202020-05-31%20at%2012.44.34.png?raw=true)
 
-</br></br>
+</br>
 ### git merge
 Merging newly created fencing branch onto master. </br>
-`git merge branch_name`
+`git merge branch_name` example merging fencing onto master: `git merge fencing`
 
 
 ## Git - Git Teamwork

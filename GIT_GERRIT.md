@@ -332,6 +332,10 @@ The command
 </br>
 `git branch -d branch_name`
 will delete the specified branch from your Git project.
+```
+$ git branch -d fencing
+Deleted branch fencing (was 9c955d3).
+```
 </br></br></br></br>
 
 

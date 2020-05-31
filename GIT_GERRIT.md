@@ -17,13 +17,13 @@ The Git workflow consists of editing files in the working directory, adding file
 In the output, notice the file in red under untracked files. Untracked means that Git sees the file but has not started tracking changes yet.
 
 `git add`
-In order for Git to start tracking scene-1.txt, the file needs to be added to the staging area.
+In order for Git to start tracking scene-1.txt, the file needs to be added to the staging area. This adds all files to the staging area!  
 
 `git diff filename`
 Here, filename is the actual name of the file. If the name of my file was changes.txt the command would be
 
 `git add filename` 
-Adds the changes in filename to the staging area in Git.
+Adds the changes in filename to the staging area in Git. Important to note that safest is NOT TO SKIP `git add filename` on already tracked files that were updated!
 
 `git commit -m "Complete first line of dialogue"`
 A commit is the last step in our Git workflow. A commit permanently stores changes from the staging area inside the repository.

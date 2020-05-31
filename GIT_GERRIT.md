@@ -245,7 +245,9 @@ Changes to be committed:
 ```
 
 **Recap:** </br>
-`git checkout HEAD filename` restores a file in the working directory to look as it did in your last commit.
+`git checkout HEAD filename` restores a file in the working directory to look as it did in your last commit. </br>
+Git backtracking commands lets you: discard changes in the working directory, go back to a previous commit, unstage a file in staging area. </br>
+`git reset HEAD filename` command removes file changes from the staging area.
 
 
 ## Git - Git Branching

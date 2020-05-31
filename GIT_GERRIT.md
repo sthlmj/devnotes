@@ -88,9 +88,66 @@ Connecting local repository to github: </br>
 ## Git - How to Backtrack in Git
 When working on a Git project, sometimes we make changes that we want to get rid of. Git offers a few eraser-like features that allow us to undo mistakes during project creation.
 </br></br>
-In Git, the commit you are currently on is known as the <b>HEAD</b> commit. In many cases, the most recently made commit is the <b>HEAD</b> commit.</br>
-To see the HEAD commit, enter: 
-`$ git show HEAD`
+In Git, the commit you are currently on is known as the <b>HEAD</b> commit. In many cases, the most recently made commit is the <b>HEAD</b> commit. 
+</br></br>
+To see the HEAD commit: 
+`git show HEAD`
+</br>
+The output of this command will display everything the git log command displays for the <b>HEAD</b> commit, plus all the file changes that were committed.
+
+### Git checkout
+The command `git checkout filename` reverts committed changes and will restore the file in your working directory to look exactly as it did when you last made a commit. ONLY the <b>HEAD</b> (latest commit)!
+</br>
+This is your <b>HEAD</b> before checkout: 
+```
+$ git show HEAD
+commit 76a1c2d57b4b4601700b382cef23bdb108d85bb
+2
+Author: Joeh <ccuser@blabla.com>
+Date:   Sun May 31 08:18:21 2020 +0000
+
+    Inserted Ghost to scene5.txt
+
+diff --git a/scene-5.txt b/scene-5.txt
+index b12dd97..5dd5d4e 100644
+--- a/scene-5.txt
++++ b/scene-5.txt
+@@ -12,3 +12,7 @@ Hamlet:
+ I will.
+
+
++Ghost:
++My hour is almost come,
++When I to sulphurous and tormenting flames
++Must render up myself.
+\ No newline at end of file
+```
+
+Run `git diff filename` command after doing some changes to scene-5.txt:
+```
+$ git diff
+diff --git a/scene-5.txt b/scene-5.txt
+index 5dd5d4e..1aa3f62 100644
+--- a/scene-5.txt
++++ b/scene-5.txt
+@@ -14,5 +14,5 @@ I will.
+
+ Ghost:
+ My hour is almost come,
+-When I to sulphurous and tormenting flames
+-Must render up myself.
+\ No newline at end of file
++When I to sulphurous and tormenting balloons
++Must render up myself.
+\ No newline at end of file
+```
+
+Reverting changes on HEAD (latest commit!) with `git checkout HEAD filename` and verify with `git diff filename`: </br>
+```
+$ git checkout HEAD scene-5.txt
+$ git diff scene-5.txt
+```
+</br>
 
 ## Git - Git Branching
 

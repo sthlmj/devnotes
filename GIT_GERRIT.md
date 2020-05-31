@@ -47,7 +47,7 @@ Use Git commands to help keep track of changes made to a project:
 * `git log` shows a list of all previous commits, newest on top. Check time stamps.
 * Purpose of Gits staging area is to stage file changes for a commit. A staging area is: a safe place that will allow you to test any changes - major or minor - that you plan on implementing in a secure environment, preventing any unexpected errors on your live/production/secure area - where you dont want to mess up. So that you can go to sleep at nights without headache! 
 
-Notes: </br>
+### Examples: </br>
 1. Adds untracked files to staging area: </br> `git add *.txt` </br>
 2. re-add files to staging area when changes are made to already tracked files: </br>
 `git add disclaimer.txt` </br>

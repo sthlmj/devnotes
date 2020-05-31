@@ -192,7 +192,6 @@ M       scene-2.txt
 M       scene-3.txt
 M       scene-7.txt
 ```
-</br>
 Before reset:</br>
 HEAD is at the most recent commit</br></br>
 After resetting:</br>

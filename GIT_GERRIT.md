@@ -272,7 +272,25 @@ Merging newly created fencing branch onto master. </br>
 </br></br>
 Keep in mind: Update **master** with changes you made to **fencing**.</br>
 **fencing** is the giver branch, since it provides the changes.</br>
-**master** is the receiver branch, since it accepts those changes.</br>
+**master** is the receiver branch, since it accepts those changes.</br></br>
+
+Switching branch: `git checkout master`</br>
+
+```
+$ git checkout master
+Switched to branch 'master'
+$ git branch
+  fencing
+* master
+$ git merge fencing
+Updating 79a1cc5..eef97f2
+Fast-forward
+ resume.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+$ git branch
+  fencing
+* master
+
 
 
 ## Git - Git Teamwork

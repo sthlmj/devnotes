@@ -349,10 +349,36 @@ The following commands are useful in the Git branch workflow.
 `git checkout branch_name`: Used to switch from one branch to another.</br>
 `git merge branch_name`: Used to join file changes from one branch to another.</br>
 `git branch -d branch_name`: Deletes the branch specified.</br>
+`git branch -D branch_name`: Delete unmerged branch.</br>
 </br>
 
+Fast forward merge, A fast-forward merge can occur when there is a linear path from the current branch tip to the target branch. Instead of “actually” merging the branches, all Git has to do to integrate the histories is move (i.e., “fast forward”) the current branch tip up to the target branch tip: 
+```
+$ git branch
+  master
+* unordered-list
+$ git checkout master
+Switched to branch 'master'
+$ git merge unordered-list
+Updating 1481f5a..d1a4627
+Fast-forward
+ index.html | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-
+)
+```
 
-## Git - Git Teamwork
+## Git - Git Teamwork 
+So far, we’ve learned how to work on Git as a single user. Git offers a suite of collaboration tools to make working with others on a project easier.
+
+Imagine that you’re a science teacher, developing some quizzes with Sally, another teacher in the school. You are using Git to manage the project.
+
+In order to collaborate, you and Sally need:
+
+A complete replica of the project on your own computers
+A way to keep track of and review each other’s work
+Access to a definitive project version
+You can accomplish all of this by using remotes. A remote is a shared Git repository that allows multiple collaborators to work on the same Git project from different locations. Collaborators work on the project independently, and merge changes together when they are ready to do so.
+
 
 ## TODO - Moving git repository with full history: </br>
 https://www.atlassian.com/git/tutorials/git-move-repository </br>

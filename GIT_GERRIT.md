@@ -51,7 +51,8 @@ Use Git commands to help keep track of changes made to a project:
 1. Adds untracked files to staging area: </br> `git add *.txt` </br>
 2. re-add files to staging area when changes are made to already tracked files: </br>
 `git add disclaimer.txt` </br>
-3. `git log` again to see changes, newest on top:
+3. Committing staged files permanently: `git commit -m "Added warning txt"`
+4. `git log` again to see changes, newest on top:
 
 ```
 $ git log

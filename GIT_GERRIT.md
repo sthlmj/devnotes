@@ -14,7 +14,7 @@ A Repository: where Git permanently stores those changes as different versions o
 The Git workflow consists of editing files in the working directory, adding files to the staging area, and saving changes to a Git repository. In Git, we save changes with a commit.
 
 `git status`
-In the output, notice the file in red under untracked files. Untracked means that Git sees the file but has not started tracking changes yet.
+In the output, notice the file in red under untracked files. Untracked means that Git sees the file but has not started tracking changes yet. Also it shows untracked files and file changes staged for commit.
 
 `git add`
 In order for Git to start tracking scene-1.txt, the file needs to be added to the staging area. This adds all files to the staging area!  

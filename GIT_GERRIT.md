@@ -201,7 +201,7 @@ The gray commits are no longer part of your project
 You have in essence rewound the project’s history. 
 
 ![Image of git reset]
-(Screenshot%202020-05-31%20at%2011.35.38.png)
+(https://raw.githubusercontent.com/sthlmj/devnotes/master/Screenshot%202020-05-31%20at%2011.35.38.png)
 
 </br>
 ## Git - Git Branching

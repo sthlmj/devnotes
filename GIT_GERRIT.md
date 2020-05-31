@@ -290,6 +290,34 @@ Fast-forward
 $ git branch
   fencing
 * master
+```
+### git merge conflict 
+The merge was successful because master had not changed since we made a commit on fencing. Git knew to simply update master with changes on fencing. </br></br>
+
+What would happen if you made a commit on master before you merged the two branches? Furthermore, what if the commit you made on master altered the same exact text you worked on in fencing? When you switch back to master and ask Git to merge the two branches, Git doesn’t know which changes you want to keep. This is called a merge conflict.</br>
+
+Git uses <<<<<<< markings >>>>>>> to show Master and branch differences: </br>
+```
+<<<<<<< HEAD
+master version of line
+=======
+fencing version of line
+>>>>>>> fencing
+```
+
+In our case: 
+```
+<<<<<<< HEAD
+-Engage in swordfights with professional pirates
+=======
+-Engage in swordfights with professional pirates such as Smee.
+>>>>>>> fencing
+```
+
+Solving merge conflict in the editor: </br>
+Delete the content of the line as it appears in the master branch</br>
+</br>
+Delete all of Git’s special markings including the words **HEAD** and **fencing**. If any of Git’s markings remain, for example, **>>>>>>>** and **=======**, the conflict remains!
 
 
 

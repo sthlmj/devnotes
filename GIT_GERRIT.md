@@ -149,6 +149,41 @@ $ git diff scene-5.txt
 ```
 </br>
 
+Adding changes on multiple files: 
+`git add filename_1 filename_2`
+
+Verify with: `git show HEAD`
+
+</br>
+#### git reset I
+What if, before you commit, you accidentally delete an important line from scene-2.txt? Unthinkingly, you add scene-2.txt to the staging area. The file change is unrelated to the Larry/Laertes swap and you don’t want to include it in the commit.
+
+We can <i>unstage</i> that file from the staging area using: `git reset HEAD filename1 filename2`</br>
+This command <i>resets</i> the file in the staging area to be the same as the <b>HEAD</b> commit. IT DOES NOT DISCARD FILE CHANGES FROM THE WORKING DIRECTORY, IT JUST REMOVES THEM FROM THE STAGING AREA!
+
+You have now added scene-3.txt and scene-7.txt to staging area but not yet committed changes permanently. And now you've made some changes (accidentally deleted some lines of texts and committed scene-2.txt to staging area) to scene-2.txt and after that added scene-2.txt to staging area as well. Check `git status` and scene-2.txt is amongst staged files. Now you want to unstage changes made to scene-2.txt and does so with `git reset HEAD scene-2.txt`</br>
+```
+$ git reset HEAD scene-2.txt
+Unstaged changes after reset:
+M       scene-2.txt
+```
+<b>M</b> is short for Modifications.</br>
+
+Now that your accident in scene-2.txt is removed from staging area you are ready to commit changes permanently `git commit -m "saves scene-3.txt and scene-7.txt permanently"`
+</br>
+#### git reset II
+Creating a project is like hiking in a forest. Sometimes you take a wrong turn and find yourself lost.</br>
+</br>
+Just like retracing your steps on that hike, Git enables you to rewind to the part before you made the wrong turn. You can do this with:</br>
+
+`git reset commit_SHA`</br>
+This command works by using <b>the first 7 characters of the SHA of a previous commit</b>. For example, if the SHA of the previous commit is `<b>5d69206</b>5cf51a2f50ea8e7b19b5a7ae512f633ba`, use: </br>
+
+```
+git reset 5d69206
+HEAD is now set to that previous commit.
+```
+
 ## Git - Git Branching
 
 

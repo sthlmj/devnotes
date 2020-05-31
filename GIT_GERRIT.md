@@ -59,3 +59,6 @@ https://www.atlassian.com/git/tutorials/git-move-repository </ br>
 https://gist.github.com/niksumeiko/8972566 </br>
 https://medium.com/@zeebaig/how-to-migrate-git-repository-with-branches-and-commit-history-dd129fd36dca </br>
 https://medium.com/@ayushya/move-directory-from-one-repository-to-another-preserving-git-history-d210fa049d4b </br>
+
+
+## TODO - Configure nginx redirect with docker-compose to handle if someone forgot to configure new remote repo url: </br>

@@ -216,6 +216,38 @@ Additionally, you now have a way to add multiple files to the staging area with 
 Commonly used shortcut for `git checkout HEAD filename`: </br> 
 `git checkout -- filename`
 </br>
+
+If you want to commit all staged files: git add .
+```
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will
+ be committed)
+  (use "git checkout -- <file>..." to discard
+changes in working directory)
+
+        modified:   house.txt
+        modified:   portrait.txt
+        modified:   tree.txt
+
+no changes added to commit (use "git add" and/
+or "git commit -a")
+$ git add .
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   house.txt
+        modified:   portrait.txt
+        modified:   tree.txt
+```
+
+**Recap:** </br>
+`git checkout HEAD filename` restores a file in the working directory to look as it did in your last commit.
+
+
 ## Git - Git Branching
 
 

@@ -202,16 +202,15 @@ You have in essence rewound the project’s history.
 ![Git reset](https://raw.githubusercontent.com/sthlmj/devnotes/master/Screenshot%202020-05-31%20at%2011.35.38.png)
 </br></br>
 ### Generalizations
-Congratulations! You’ve learned three different ways to backtrack in Git. You can use these skills to undo changes made to your Git project.</br>
+Three different ways to backtrack in Git. You can use these skills to undo changes made to your Git project.</br>
 </br>
-Let’s take a moment to review the new commands:
-</br></br>
-git checkout HEAD filename: Discards changes in the working directory.
-git reset HEAD filename: Unstages file changes in the staging area.
-git reset commit_SHA: Resets to a previous commit in your commit history.
-Additionally, you learned a way to add multiple files to the staging area with a single command:
+Review the new commands: 
+`git checkout HEAD filename`: Discards changes in the working directory.</br>
+`git reset HEAD filename`: Unstages file changes in the staging area.</br>
+`git reset commit_SHA`: Resets to a previous commit in your commit history.</br>
+Additionally, you now have a way to add multiple files to the staging area with a single command:
 </br>
-git add filename_1 filename_2
+`git add filename_1 filename_2`
 </br>
 </br>
 ## Git - Git Branching

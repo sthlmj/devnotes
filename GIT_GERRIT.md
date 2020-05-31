@@ -8,10 +8,10 @@ The word init means initialize. The command sets up all the tools Git needs to b
 
 A Git project can be thought of as having three parts:
 
-A Working Directory: where you’ll be doing all the work: creating, editing, deleting and organizing files
-A Staging Area: where you’ll list changes you make to the working directory
-A Repository: where Git permanently stores those changes as different versions of the project
-The Git workflow consists of editing files in the working directory, adding files to the staging area, and saving changes to a Git repository. In Git, we save changes with a commit, which we will learn more about in this lesson.
+A Working Directory: where you’ll be doing all the work: creating, editing, deleting and organizing files </br>
+A Staging Area: where you’ll list changes you make to the working directory</br>
+A Repository: where Git permanently stores those changes as different versions of the project</br>
+The Git workflow consists of editing files in the working directory, adding files to the staging area, and saving changes to a Git repository. In Git, we save changes with a commit.
 
 `git status`
 In the output, notice the file in red under untracked files. Untracked means that Git sees the file but has not started tracking changes yet.

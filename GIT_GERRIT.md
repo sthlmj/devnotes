@@ -48,7 +48,6 @@ Use Git commands to help keep track of changes made to a project:
 * Purpose of Gits staging area is to stage file changes for a commit. A staging area is: a safe place that will allow you to test any changes - major or minor - that you plan on implementing in a secure environment, preventing any unexpected errors on your live/production/secure area - where you dont want to mess up. So that you can go to sleep without headache!
 
 </br>
-</br>
 1. Adds untracked files to staging area: </br> `git add *.txt` </br>
 2. re-add files to staging area when changes are made to already tracked files: </br>
 `git add disclaimer.txt` </br>
@@ -77,7 +76,7 @@ Git is a widely-used version control system used to manage code. Git allows you 
 GitHub is popular hosting service for Git repositories. GitHub allows you to store your local Git repositories in the cloud. With GitHub, you can backup your personal files, share your code, and collaborate with others.
 
 In short, GitHub is a tool for working with Git. There are other services to host Git repositories, but GitHub is a trusted, free service used by organizations across the world, big and small.
-</br>
+</br></br>
 Connecting local repository to github: </br>
 1. Initialize, add and commit repository. Check git status, there should be no files in staging area - it all should be committed. </br>
 2. Create new github repository. </br>

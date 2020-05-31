@@ -184,6 +184,7 @@ HEAD is now set to that previous commit.
 ```
 </br>
 <b>Example: </b></br> 
+
 ```
 $ git reset 76a1c2d
 Unstaged changes after reset:
@@ -191,7 +192,7 @@ M       scene-2.txt
 M       scene-3.txt
 M       scene-7.txt
 ```
-
+</br></br>
 ## Git - Git Branching
 
 

@@ -47,7 +47,8 @@ Use Git commands to help keep track of changes made to a project:
 * `git log` shows a list of all previous commits, newest on top. Check time stamps.
 * Purpose of Gits staging area is to stage file changes for a commit. A staging area is: a safe place that will allow you to test any changes - major or minor - that you plan on implementing in a secure environment, preventing any unexpected errors on your live/production/secure area - where you dont want to mess up. So that you can go to sleep without headache!
 
-</br></br>
+</br>
+</br>
 1. Adds untracked files to staging area: </br> `git add *.txt` </br>
 2. re-add files to staging area when changes are made to already tracked files: </br>
 `git add disclaimer.txt` </br>
@@ -69,6 +70,20 @@ Date:   Sun May 31 07:07:38 2020 +0000
 
     committing files
 ```
+
+### Git and Github
+Git is a widely-used version control system used to manage code. Git allows you to save drafts of your code so that you can look back at previous versions and potentially undo complicated errors. A project managed with Git is called a Git repository.
+
+GitHub is popular hosting service for Git repositories. GitHub allows you to store your local Git repositories in the cloud. With GitHub, you can backup your personal files, share your code, and collaborate with others.
+
+In short, GitHub is a tool for working with Git. There are other services to host Git repositories, but GitHub is a trusted, free service used by organizations across the world, big and small.
+</br>
+Connecting local repository to github: </br>
+1. Initialize, add and commit repository. Check git status, there should be no files in staging area - it all should be committed. </br>
+2. Create new github repository. </br>
+3. Copy and paste "...push an already existing repository HTTPS/SSH" `git remote add origin https://github.com/sthlmj/devnotes` to connect local repository to github "remote repository" </br>
+4. `git push -u origin master` pushes local repository into the github remote repository. </br>
+
 
 ## Git - How to Backtrack in Git
 

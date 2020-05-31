@@ -199,7 +199,9 @@ After resetting:</br>
 HEAD goes to a previously made commit of your choice
 The gray commits are no longer part of your project
 You have in essence rewound the project’s history. 
-![git reset](https://github.com/sthlmj/devnotes/blob/master/Screenshot%202020-05-31%20at%2011.35.38.png)
+
+![Image of git reset]
+(https://github.com/sthlmj/devnotes/blob/master/Screenshot%202020-05-31%20at%2011.35.38.png)
 
 </br>
 ## Git - Git Branching

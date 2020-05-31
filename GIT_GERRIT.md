@@ -87,9 +87,8 @@ Connecting local repository to github: </br>
 
 ## Git - How to Backtrack in Git
 When working on a Git project, sometimes we make changes that we want to get rid of. Git offers a few eraser-like features that allow us to undo mistakes during project creation.
-</br>
+</br></br>
 In Git, the commit you are currently on is known as the <b>HEAD</b> commit. In many cases, the most recently made commit is the <b>HEAD</b> commit.</br>
-</br>
 To see the HEAD commit, enter: 
 `$ git show HEAD`
 

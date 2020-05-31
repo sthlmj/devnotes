@@ -194,14 +194,13 @@ M       scene-7.txt
 ```
 </br>
 Before reset:</br>
-HEAD is at the most recent commit</br>
+HEAD is at the most recent commit</br></br>
 After resetting:</br>
 HEAD goes to a previously made commit of your choice
 The gray commits are no longer part of your project
 You have in essence rewound the project’s history. 
 
-![Image of git reset]
-(https://raw.githubusercontent.com/sthlmj/devnotes/master/Screenshot%202020-05-31%20at%2011.35.38.png)
+![Git reset](https://raw.githubusercontent.com/sthlmj/devnotes/master/Screenshot%202020-05-31%20at%2011.35.38.png)
 
 </br>
 ## Git - Git Branching

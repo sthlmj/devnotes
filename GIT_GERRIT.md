@@ -194,14 +194,12 @@ M       scene-7.txt
 ```
 </br>
 Before reset:</br>
-</br>
 HEAD is at the most recent commit</br>
 After resetting:</br>
-</br>
 HEAD goes to a previously made commit of your choice
 The gray commits are no longer part of your project
-You have in essence rewound the project’s history 
-![git reset](https://github.com/sthlmj/devnotes/blob/master/Screenshot%202020-05-31%20at%2011.35.38.png)</br>
+You have in essence rewound the project’s history. 
+![git reset](https://github.com/sthlmj/devnotes/blob/master/Screenshot%202020-05-31%20at%2011.35.38.png)
 
 </br>
 ## Git - Git Branching

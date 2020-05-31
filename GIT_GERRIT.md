@@ -23,7 +23,7 @@ In order for Git to start tracking scene-1.txt, the file needs to be added to th
 Here, filename is the actual name of the file. If the name of my file was changes.txt the command would be
 
 `git add filename` 
-Adds the changes in filename to the staging area in Git. Important to note that safest is NOT TO SKIP `git add filename` on already tracked files that were updated!
+Adds the changes in filename to the staging area in Git. </br> Important to note that safest is NOT TO SKIP `git add filename` on already tracked files that were updated!
 
 `git commit -m "Complete first line of dialogue"`
 A commit is the last step in our Git workflow. A commit permanently stores changes from the staging area inside the repository.

@@ -269,6 +269,10 @@ New Branch is a different version of the Git project. It contains commits from M
 ### git merge
 Merging newly created fencing branch onto master. </br>
 `git merge branch_name` example merging fencing onto master: `git merge fencing`
+</br>
+Your goal is to update **master** with changes you made to **fencing**.</br>
+**fencing** is the giver branch, since it provides the changes.</br>
+**master** is the receiver branch, since it accepts those changes.</br>
 
 
 ## Git - Git Teamwork

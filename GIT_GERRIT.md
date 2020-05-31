@@ -183,7 +183,7 @@ git reset 5d69206
 HEAD is now set to that previous commit.
 ```
 </br>
-</b>Example:</b></br> 
+<b>Example: </b></br> 
 ```
 $ git reset 76a1c2d
 Unstaged changes after reset:

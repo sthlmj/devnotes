@@ -317,7 +317,9 @@ In our case:
 Solving merge conflict in the editor: </br>
 Delete the content of the line as it appears in the master branch</br>
 </br>
-Delete all of Git’s special markings including the words **HEAD** and **fencing**. If any of Git’s markings remain, for example, **>>>>>>>** and **=======**, the conflict remains!
+Delete all of Git’s special markings including the words **HEAD** and **fencing**. If any of Git’s markings remain, for example, **>>>>>>>** and **=======**, the conflict remains!</br>
+</br>
+After resolving merge conflict, add the file to staging area with `git add resume.txt` and then commit the file with `git commit -m "Resolving merge conflict" resume.txt` Then do a merge with `git merge fencing`.
 
 
 

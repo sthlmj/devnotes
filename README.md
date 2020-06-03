@@ -324,6 +324,9 @@ Admin Documentation link: https://girder.readthedocs.io/en/stable/installation.h
 
 ## Jenkins stuff
 
+**Nightly Builds declarative pipeline**
+https://hopstorawpointers.blogspot.com/2018/12/nightly-build-steps-with-jenkins.html
+
 **Dockerized Jenkins**
 Visit jenkins container at: http://localhost:8080/jenkins or similar
 

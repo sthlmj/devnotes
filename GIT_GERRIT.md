@@ -379,6 +379,210 @@ A way to keep track of and review each other’s work
 Access to a definitive project version
 You can accomplish all of this by using remotes. A remote is a shared Git repository that allows multiple collaborators to work on the same Git project from different locations. Collaborators work on the project independently, and merge changes together when they are ready to do so.
 
+### git clone
+In order to get a replica of remote project code on your own computer we use `git clone remote_location clone_name`. Where `remote` location tells Git where to go to find the remote. This could be a web address, or a filepath and `clone_name` is the name you give to the directory in which Git will clone the repository.
+
+**Examples:** </br>
+```
+$ git clone science-quizzes my-quizzes
+Cloning into 'my-quizzes'...
+done.
+```
+Git informs us that it’s copying everything from science-quizzes into the my-quizzes directory.
+my-quizzes is your local copy of the science-quizzes Git project. If you commit changes to the project here, Sally will not know about them.
+
+### git remote -v
+One thing that Git does behind the scenes when you clone science-quizzes (into your my-quizzes) is give the **remote address** the name **origin**, so that you can refer to it more conveniently. In this case, Sally’s remote is origin.
+
+See a list of a Git project’s remotes with the command: `git remote -v` </br>
+
+**Examples:** </br>
+```
+$ git remote -v
+origin  /home/ccuser/workspace/curriculum/science-quizzes (fetch)
+origin  /home/ccuser/workspace/curriculum/science-quizzes (push)
+```
+* Git lists the name of the remote, `origin`, as well as its location.
+* Git automatically names this remote `origin`, because it **refers to the remote repository of origin**. However, it is possible to safely change its name.
+* The remote is listed twice: once for `(fetch)` and once for `(push)`. We’ll work with these later.
+
+### git fetch
+After you cloned science-quizzes, you had to run off to teach a class. Now that you’re back at your computer, there’s a problem: what if, while you were teaching, Sally changed the science-quizzes Git project in some way. If so, your clone will no longer be up-to-date. </br></br>
+
+An easy way to see if changes have been made to the remote and bring the changes down to your local copy is with:</br>
+`git fetch` </br></br>
+
+This command <i>will not merge changes from the remote into your local repository</i>. It brings those changes onto what’s called a <i>remote branch</i>. 
+```
+$ git fetch
+remote: Counting objects: 5, done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 5 (delta 1), reused 0 (delta 0)
+Unpacking objects: 100% (5/5), done.
+From /home/ccuser/workspace/curriculum-a/science-quizzes
+ * [new branch]      master     -> origin/master
+$ git branch -a
+* master
+  remotes/origin/master
+```
+
+### git merge
+Even though Sally’s new commits have been fetched to your local copy of the Git project, those commits are on the `origin/master` branch. Your <i>local</i> `master` branch has not been updated yet, so you can’t view or make changes to any of the work she has added.
+
+In Part III, Git Branching we worked with how to merge branches. Now we’ll use the git merge command to **integrate origin/master into your local master branch**. 
+</br></br>
+Accomplish this with: 
+`git merge origin/master`
+
+Example HEAD is "Add first question to physics quiz", mergin remote/origin/master into local master (local master is receiver of changes): 
+```
+$ pwd
+/home/ccuser/workspace/curriculum-a/my-quizzes
+
+$ git show --
+commit 2fd7d9b248e0b4a3b531b9af3bb61916d42ad45f
+Author: danasselin <johndoe@example.com>
+Date:   Thu Oct 29 15:42:55 2015 -0400
+
+    Add first question to physics quiz
+
+diff --git a/physics.txt b/physics.txt
+index e69de29..3d47f43 100644
+--- a/physics.txt
++++ b/physics.txt
+@@ -0,0 +1,3 @@
++1. A scalar is a quantity which has both magnitude and direction.
++a) true
++b) false
+\ No newline at end of file
+
+$ git branch -a
+* master
+  remotes/origin/master
+
+$ git merge origin/master
+Updating 2fd7d9b..3a29454
+Fast-forward
+ biology.txt | 4 ++++
+ 1 file changed, 4 insertions(+)
+ create mode 100644 biology.txt
+
+```
+
+Git log before merging remote master with local master: 
+```
+$ git log
+commit 2fd7d9b248e0b4a3b531b9af3bb61916d42ad45f
+Author: danasselin <johndoe@example.com>
+Date:   Thu Oct 29 15:42:55 2015 -0400
+
+    Add first question to physics quiz
+
+commit 2c4e484e0f5bda111a164e6580f4a4a603cea48f
+Author: danasselin <johndoe@example.com>
+Date:   Thu Oct 29 15:42:36 2015 -0400
+
+    Add physics quiz
+
+commit 65be0d3f24fb34363bdac6949325f35ad3cdd98a
+Author: danasselin <johndoe@example.com>
+Date:   Thu Oct 29 15:42:21 2015 -0400
+
+    Add chemistry quiz
+
+commit 9bfc082a0e64efe5c0a2e4298e0b4f127d0a9b96
+Author: danasselin <johndoe@example.com>
+Date:   Thu Oct 29 15:42:00 2015 -0400
+```
+
+Git log after merging remote master with local master: 
+```
+$ git log
+commit 3a294546f4a55f02bf37233ef8988d8b9dd7ce59
+Author: danasselin <johndoe@example.com>
+Date:   Tue Nov 3 12:33:23 2015 -0500
+
+    Add heading and comment to biology quiz
+
+commit 6aa7704a31d05541141fbb529abf946bd2fd416b
+Author: danasselin <johndoe@example.com>
+Date:   Thu Oct 29 17:04:04 2015 -0400
+
+    Add biology quiz
+
+commit 2fd7d9b248e0b4a3b531b9af3bb61916d42ad45f
+Author: danasselin <johndoe@example.com>
+Date:   Thu Oct 29 15:42:55 2015 -0400
+
+    Add first question to physics quiz
+
+commit 2c4e484e0f5bda111a164e6580f4a4a603cea48f
+Author: danasselin <johndoe@example.com>
+Date:   Thu Oct 29 15:42:36 2015 -0400
+
+    Add physics quiz
+```
+### Git workflow
+Now that you’ve merged `origin/master` into your `local master` branch, you’re ready to contribute some work of your own. The workflow for Git collaborations typically follows this order:
+
+1. Fetch and merge changes from the remote
+2. Create a branch to work on a new project feature
+3. Develop the feature on your branch and commit your work
+4. <u>Fetch and merge from the remote again (in case new commits were made while you were working)</u>
+5. Push your branch up to the remote for review
+
+**Steps 1 and 4 are a safeguard against merge conflicts**, which occur when two branches contain file changes that cannot be merged with the git merge command. Step 5 involves git push.
+
+### git push
+Now it's time to share your work with the rest of the world.
+The command: `git push origin your_branch_name` will push your branch up to the remote, origin. From there, Sally can review your branch and merge your work into the master branch, making it part of the definitive project version.
+
+**Example:**  
+```
+$ git branch
+* bio-questions
+  master
+
+$ git status
+On branch bio-questions
+nothing to commit, working directory clean
+
+$ git push origin bio-questions
+Counting objects: 3, done.
+Delta compression using up to 16 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 404 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+To /home/ccuser/workspace/curriculum-a/science-quizzes
+ * [new branch]      bio-questions -> bio-questions
+ ```
+In the output, notice the line:
+```
+To /home/ccuser/workspace/curriculum/science-quizzes
+ * [new branch]      bio-questions -> bio-questions
+ ```
+Git informs us that the branch bio-questions was pushed up to the remote. Sally can now review your new work and can merge it into the remote’s master branch.
+
+### generalization
+
+Now you know enough to start collaborating on Git projects! Let’s review.
+
+* A `remote` is a Git repository that lives outside your Git project folder. Remotes can live on the web, on a shared network or even in a separate folder on your local computer.
+* **The Git Collaborative Workflow are steps that enable smooth project development when multiple collaborators are working on the same Git project.**
+
+We also learned the following commands:
+
+* `git clone`: Creates a local copy of a remote.
+* `git remote -v`: Lists a Git project’s remotes.
+* `git fetch`: Fetches work from the remote into the local copy.
+* `git merge origin/master`: Merges origin/master into your local branch.
+* `git push origin <branch_name>`: Pushes a local branch to the origin remote.
+
+Git projects are usually managed on Github, a website that hosts Git projects for millions of users. With Github you can access your projects from anywhere in the world by using the basic workflow you learned here. OR if you host your own source code management like gerrit on PREMISES your project team or repository manager or configuration management team might have rules to disallow direct push onto master. Complement these new knowledges with your local best practice. 
+
+### javascrip project
+
+
 
 ## TODO - Moving git repository with full history: </br>
 https://www.atlassian.com/git/tutorials/git-move-repository </br>

@@ -1,7 +1,9 @@
-Getting started with bazel and jenkins.
-https://blog.nrwl.io/dockerize-apps-with-jenkins-and-bazel-797c7964ae3b?gi=3db02254a07b
+# Getting started with bazel and jenkins
+More info: https://blog.nrwl.io/dockerize-apps-with-jenkins-and-bazel-797c7964ae3b?gi=3db02254a07b
 
-Example pipeline to run bazel: 
+## Example pipeline to run bazel on a jenkins agent
+
+```
 pipeline {
   agent any
   stages {
@@ -12,3 +14,4 @@ pipeline {
     }
   }
 }
+```

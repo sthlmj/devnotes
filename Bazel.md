@@ -17,8 +17,11 @@ pipeline {
 }
 ```
 
-### Installing bazel on Ubuntu
-`$ sudo apt update && sudo apt install bazel`
+### Installing bazel on Ubuntu & CentOS
+```
+$ sudo apt update && sudo apt install bazel
+$ yum update && yum install bazel
+``` 
 
 ### Bazel BUILD file
 ```

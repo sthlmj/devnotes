@@ -20,7 +20,9 @@ pipeline {
 ### Installing bazel on Ubuntu & CentOS
 ```
 $ sudo apt update && sudo apt install bazel
-$ yum update && yum install bazel
+
+$ yum-config-manager --add-repo=https://copr.fedorainfracloud.org/coprs/vbatts/bazel/repo/epel-7/vbatts-bazel-epel-7.repo -y
+$ yum update -y && yum install bazel3 -y
 ``` 
 
 ### Bazel BUILD file

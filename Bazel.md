@@ -17,6 +17,9 @@ pipeline {
 }
 ```
 
+### Installing bazel on Ubuntu
+`$ sudo apt update && apt install bazel`
+
 ### Bazel BUILD file
 ```
 BUILD

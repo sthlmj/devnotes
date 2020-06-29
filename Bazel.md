@@ -25,6 +25,9 @@ $ yum-config-manager --add-repo=https://copr.fedorainfracloud.org/coprs/vbatts/b
 $ yum update -y && yum install bazel3 -y
 ``` 
 
+## Bazel BUILD hello Joe on python
+Example on how to write and build a python file with bazel.
+
 ### Bazel BUILD file
 ```
 BUILD

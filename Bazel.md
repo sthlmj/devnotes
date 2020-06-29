@@ -1,5 +1,5 @@
 # Getting started with bazel and jenkins
-More info: https://blog.nrwl.io/dockerize-apps-with-jenkins-and-bazel-797c7964ae3b?gi=3db02254a07b
+More info: https://blog.nrwl.io/dockerize-apps-with-jenkins-and-bazel-797c7964ae3b?gi=3db02254a07b <br>
 More info on Bazel build python: https://pycon.org.il/2016/static/sessions/benjamin-peterson.pdf
 
 ### Example pipeline to run bazel on a jenkins agent

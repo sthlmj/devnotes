@@ -70,6 +70,9 @@ $ du -sh /opt/app
 Trace network routing in cmder: 
 $ tracert daaabbb.bbaaa.biz
 
+Path: 
+export PATH=/root/npm/stuff/bin/node:$PATH
+
 
 25 Useful linux apt ubuntu debian commands: 
 https://www.tecmint.com/useful-basic-commands-of-apt-get-and-apt-cache-for-package-management/
@@ -79,8 +82,6 @@ https://www.tecmint.com/20-linux-yum-yellowdog-updater-modified-commands-for-pac
 
 Wget proxy: 
 https://stackoverflow.com/questions/11211705/how-to-set-proxy-for-wget
-
-
 
 SSH agent: 
 https://kb.iu.edu/d/aeww

@@ -25,7 +25,8 @@ search corp.biz
 nameserver 123.12.12.12
 
 Identify OS: 
-$ cat /etc/os-release awk -F= '/^NAME/{print $2}' /etc/os-release
+$ cat /etc/os-release 
+$ awk -F= '/^NAME/{print $2}' /etc/os-release
 
 Scroll screen: 
 $ history | less

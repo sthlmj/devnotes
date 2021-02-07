@@ -1,3 +1,4 @@
+```
 Linux find a directory recursively by name: 
 find / -type d -name "svn" -print 
 
@@ -100,3 +101,4 @@ https://www.cyberciti.biz/faq/how-to-install-curl-command-on-a-ubuntu-linux/
 
 Podman on windows 10:
 https://computingforgeeks.com/run-podman-on-windows-server-with-wsl2/
+```

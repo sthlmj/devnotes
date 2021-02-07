@@ -99,3 +99,5 @@ https://www.tecmint.com/useful-basic-commands-of-apt-get-and-apt-cache-for-packa
 Podman on windows 10: </br>
 https://computingforgeeks.com/run-podman-on-windows-server-with-wsl2/
 
+Automate VM creation with Vagrant hashicorp
+https://medium.com/@w.albertusd/automate-vm-creation-with-vagrant-c97e90fa1b45

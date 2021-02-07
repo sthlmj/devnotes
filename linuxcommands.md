@@ -14,7 +14,7 @@ Linux find docker command used to start the container?:
 ps -ef | grep -i gerrit
 
 Linux cat output of find results: 
-find / -name *gerrit.config* -exec cat {} +
+find / -name *codeversioncontrol.config* -exec cat {} +
 
 How to write to a file when there is now vim vi nano: 
 cat > resolv.conf
@@ -97,3 +97,6 @@ https://superuser.com/questions/914856/grep-display-all-output-but-highlight-sea
 
 Install Curl - ubuntu: 
 https://www.cyberciti.biz/faq/how-to-install-curl-command-on-a-ubuntu-linux/
+
+Podman on windows 10:
+https://computingforgeeks.com/run-podman-on-windows-server-with-wsl2/

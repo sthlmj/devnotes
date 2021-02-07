@@ -1,3 +1,4 @@
+## Useful linux stuff
 ```
 Linux find a directory recursively by name: 
 find / -type d -name "svn" -print 
@@ -73,32 +74,32 @@ $ tracert daaabbb.bbaaa.biz
 
 Path: 
 export PATH=/root/npm/stuff/bin/node:$PATH
+```
+## Links
 
-
-25 Useful linux apt ubuntu debian commands: 
-https://www.tecmint.com/useful-basic-commands-of-apt-get-and-apt-cache-for-package-management/
-
-20 useful linux yum centos commands: 
+20 useful linux yum centos commands: </br>
 https://www.tecmint.com/20-linux-yum-yellowdog-updater-modified-commands-for-package-mangement/
 
-Wget proxy: 
+25 Useful linux apt ubuntu debian commands: </br>
+https://www.tecmint.com/useful-basic-commands-of-apt-get-and-apt-cache-for-package-management/
+
+Wget proxy: </br>
 https://stackoverflow.com/questions/11211705/how-to-set-proxy-for-wget
 
-SSH agent: 
+SSH agent: </br>
 https://kb.iu.edu/d/aeww
 
-Checking for existing ssh key: 
+Checking for existing ssh key: </br>
 https://help.github.com/en/github/authenticating-to-github/checking-for-existing-ssh-keys
 
-SELinux set levels:
+SELinux set levels: </br>
 https://www.thegeekdiary.com/how-to-disable-or-set-selinux-to-permissive-mode/
 
-Grep display all output but highlight search matches: 
+Grep display all output but highlight search matches: </br>
 https://superuser.com/questions/914856/grep-display-all-output-but-highlight-search-matches
 
-Install Curl - ubuntu: 
+Install Curl - ubuntu: </br>
 https://www.cyberciti.biz/faq/how-to-install-curl-command-on-a-ubuntu-linux/
 
-Podman on windows 10:
+Podman on windows 10: </br>
 https://computingforgeeks.com/run-podman-on-windows-server-with-wsl2/
-```

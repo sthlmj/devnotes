@@ -56,7 +56,7 @@ $ ls -lt | less
 $ ls -lt ~/Downloads/ | less
 
 CURLA -O för att hämta ner filen:
-$ curl -v -O https://artifactory.com/sdfsfal.javadoc
+$ curl -v -O "https://artifactory.com/sdfsfal.javadoc"
 $ curl -x "http://proxy.biz:80" --trace-ascii /tmp/dump.txt get.docker.com -o get-docker.sh 
 
 
